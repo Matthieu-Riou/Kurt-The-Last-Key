@@ -16,6 +16,8 @@ int main()
 
 	Gestionnaire gestionnaire;
 
+	window.setFramerateLimit(60);
+
     // on fait tourner le programme jusqu'à ce que la fenêtre soit fermée
     while (window.isOpen())
     {
