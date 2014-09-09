@@ -1,0 +1,263 @@
+\hypertarget{classBatimentExterieur}{\section{Batiment\-Exterieur Class Reference}
+\label{classBatimentExterieur}\index{Batiment\-Exterieur@{Batiment\-Exterieur}}
+}
+
+
+Classe gérant l'extérieur des batiments.  
+
+
+
+
+{\ttfamily \#include $<$Batiment\-Exterieur.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBatimentExterieur_a59a7496c61c1d0cada8cbf6dc38d26b3}{\hyperlink{classBatimentExterieur_a59a7496c61c1d0cada8cbf6dc38d26b3}{Batiment\-Exterieur} (float pos\-X, \hyperlink{classMap}{Map} $\ast$exterieur, \hyperlink{classConteneurPersonnage}{Conteneur\-Personnage} $\ast$perso)}\label{classBatimentExterieur_a59a7496c61c1d0cada8cbf6dc38d26b3}
+
+\begin{DoxyCompactList}\small\item\em Constructeur de batiment Trouve aléatoirement un nombre d'étages et un nombre de fenetres Retrouve la taille d'une fenetre, d'une porte et de l'espace inter-\/fenetres Calcule la taille du batiment obtenu Construit le mur, la porte, l'interieur du batiment puis ouvre le batiment Applique à chaque Rectangle\-Shape les mdifications nécéssaires (couleur, position...) \end{DoxyCompactList}\item 
+\hyperlink{classBatimentExterieur_a37ad20e6c840b9c9008b21508edccda8}{$\sim$\-Batiment\-Exterieur} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de \hyperlink{classBatimentExterieur}{Batiment\-Exterieur}. \end{DoxyCompactList}\item 
+\hypertarget{classBatimentExterieur_a5ffb4284c583ff39333b8108984d51e4}{void \hyperlink{classBatimentExterieur_a5ffb4284c583ff39333b8108984d51e4}{ouvrir} ()}\label{classBatimentExterieur_a5ffb4284c583ff39333b8108984d51e4}
+
+\begin{DoxyCompactList}\small\item\em Ouvre le batiment, puis change la couleur de la porte. \end{DoxyCompactList}\item 
+\hypertarget{classBatimentExterieur_a84948baa08d5ee51e333f5463c65a03b}{void \hyperlink{classBatimentExterieur_a84948baa08d5ee51e333f5463c65a03b}{fermer} ()}\label{classBatimentExterieur_a84948baa08d5ee51e333f5463c65a03b}
+
+\begin{DoxyCompactList}\small\item\em Ferme le batiment, puis change la couleur de la porte. \end{DoxyCompactList}\item 
+bool \hyperlink{classBatimentExterieur_a89e6aa6f39f9fa960ece00289325ef96}{est\-Ouvert} () const 
+\begin{DoxyCompactList}\small\item\em Permet de savoir si le batiment est ouvert. \end{DoxyCompactList}\item 
+bool \hyperlink{classBatimentExterieur_a0f7131a58c2a36bfd7889409da5e2383}{est\-Ferme} () const 
+\begin{DoxyCompactList}\small\item\em Permet de savoir si le batiment est fermé \end{DoxyCompactList}\item 
+void \hyperlink{classBatimentExterieur_adc622081f64c75d9523ea56c028eca54}{add\-Cle} (\hyperlink{classCle}{Cle} $\ast$c)
+\begin{DoxyCompactList}\small\item\em Ajoute une clé dans le batiment. \end{DoxyCompactList}\item 
+sf\-::\-Vector2f \hyperlink{classBatimentExterieur_ac85920cb049dfafdbcdf0a8a70b2d2fb}{get\-Taille} () const 
+\begin{DoxyCompactList}\small\item\em Getter sur la taille. \end{DoxyCompactList}\item 
+sf\-::\-Vector2f \hyperlink{classBatimentExterieur_a6fb757558a77b6b84fd7f5fe5f60b4f9}{get\-Taille\-Porte} () const 
+\begin{DoxyCompactList}\small\item\em Getter sur la taille de la porte. \end{DoxyCompactList}\item 
+sf\-::\-Vector2f \hyperlink{classBatimentExterieur_ae11a31a7867fe7f87db1592dd7104786}{get\-Position\-Porte} () const 
+\begin{DoxyCompactList}\small\item\em Getter sur la position de la porte (position du rectangle la représentant) \end{DoxyCompactList}\item 
+\hyperlink{classBatimentInterieur}{Batiment\-Interieur} $\ast$ \hyperlink{classBatimentExterieur_a0837a7b3fe1e4a1d4fb5f10c0522c0ce}{get\-Interieur} () const 
+\begin{DoxyCompactList}\small\item\em Getter sur l'interieur du batiment. \end{DoxyCompactList}\item 
+void \hyperlink{classBatimentExterieur_a1f58c795cc083e7765ffabc396636d3e}{deplacer} (\hyperlink{Espace_8h_a7cf6e8c5a5bc5e7b2afef3647870b1c4}{Dir} dir)
+\begin{DoxyCompactList}\small\item\em Deplace le batiment suivant la direction. \end{DoxyCompactList}\item 
+void \hyperlink{classBatimentExterieur_aa526f2d266e481cb12b2cd9d94eaeed4}{afficher} (sf\-::\-Render\-Window \&app) const 
+\begin{DoxyCompactList}\small\item\em Affiche l'extérieur du batiment\-: le mur, la porte puis les fenetres. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classBatimentExterieur_af4fc6e80ed2a6eb26264697d9cd752a4}{etage\-\_\-}
+\item 
+unsigned int \hyperlink{classBatimentExterieur_a67bacf13a8f3a238d89d8685a750ff40}{nb\-Fen\-Largeur\-\_\-}
+\item 
+sf\-::\-Vector2f \hyperlink{classBatimentExterieur_a9f70a87570723674f6e1f383942248ef}{taille\-Fen\-\_\-}
+\item 
+sf\-::\-Vector2f \hyperlink{classBatimentExterieur_ada8bdedf97824310bc6464ab99f2841a}{espace\-Fen\-\_\-}
+\item 
+sf\-::\-Vector2f \hyperlink{classBatimentExterieur_afb8fac448d76a2c934a16ec0981f9004}{taille\-Porte\-\_\-}
+\item 
+sf\-::\-Vector2f \hyperlink{classBatimentExterieur_aba1fa0abfce890e24e93619a4a52ab62}{taille\-\_\-}
+\item 
+sf\-::\-Rectangle\-Shape \hyperlink{classBatimentExterieur_a6929037a2c2ab1893c4992452454e7f6}{mur\-\_\-}
+\item 
+sf\-::\-Rectangle\-Shape \hyperlink{classBatimentExterieur_a175feefa144902956539361a17be4b4b}{porte\-\_\-}
+\item 
+std\-::vector$<$ sf\-::\-Rectangle\-Shape $>$ \hyperlink{classBatimentExterieur_a8987b811e7ed4e6d535af016d8313a39}{fen\-\_\-}
+\item 
+\hyperlink{classBatimentInterieur}{Batiment\-Interieur} $\ast$ \hyperlink{classBatimentExterieur_a777ffd957176d89835f51c94ee5f7c3f}{interieur\-\_\-}
+\item 
+bool \hyperlink{classBatimentExterieur_a10dcc22bae2b39269bbcb0318430305c}{ouvert\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe gérant l'extérieur des batiments. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBatimentExterieur_a37ad20e6c840b9c9008b21508edccda8}{\index{Batiment\-Exterieur@{Batiment\-Exterieur}!$\sim$\-Batiment\-Exterieur@{$\sim$\-Batiment\-Exterieur}}
+\index{$\sim$\-Batiment\-Exterieur@{$\sim$\-Batiment\-Exterieur}!BatimentExterieur@{Batiment\-Exterieur}}
+\subsubsection[{$\sim$\-Batiment\-Exterieur}]{\setlength{\rightskip}{0pt plus 5cm}Batiment\-Exterieur\-::$\sim$\-Batiment\-Exterieur (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBatimentExterieur_a37ad20e6c840b9c9008b21508edccda8}
+
+
+Destructeur de \hyperlink{classBatimentExterieur}{Batiment\-Exterieur}. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBatimentExterieur_adc622081f64c75d9523ea56c028eca54}{\index{Batiment\-Exterieur@{Batiment\-Exterieur}!add\-Cle@{add\-Cle}}
+\index{add\-Cle@{add\-Cle}!BatimentExterieur@{Batiment\-Exterieur}}
+\subsubsection[{add\-Cle}]{\setlength{\rightskip}{0pt plus 5cm}void Batiment\-Exterieur\-::add\-Cle (
+\begin{DoxyParamCaption}
+\item[{{\bf Cle} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}}\label{classBatimentExterieur_adc622081f64c75d9523ea56c028eca54}
+
+
+Ajoute une clé dans le batiment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & La clé à ajouter \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBatimentExterieur_aa526f2d266e481cb12b2cd9d94eaeed4}{\index{Batiment\-Exterieur@{Batiment\-Exterieur}!afficher@{afficher}}
+\index{afficher@{afficher}!BatimentExterieur@{Batiment\-Exterieur}}
+\subsubsection[{afficher}]{\setlength{\rightskip}{0pt plus 5cm}void Batiment\-Exterieur\-::afficher (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Render\-Window \&}]{app}
+\end{DoxyParamCaption}
+) const}}\label{classBatimentExterieur_aa526f2d266e481cb12b2cd9d94eaeed4}
+
+
+Affiche l'extérieur du batiment\-: le mur, la porte puis les fenetres. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app} & La fenetre du jeu \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBatimentExterieur_a1f58c795cc083e7765ffabc396636d3e}{\index{Batiment\-Exterieur@{Batiment\-Exterieur}!deplacer@{deplacer}}
+\index{deplacer@{deplacer}!BatimentExterieur@{Batiment\-Exterieur}}
+\subsubsection[{deplacer}]{\setlength{\rightskip}{0pt plus 5cm}void Batiment\-Exterieur\-::deplacer (
+\begin{DoxyParamCaption}
+\item[{{\bf Dir}}]{dir}
+\end{DoxyParamCaption}
+)}}\label{classBatimentExterieur_a1f58c795cc083e7765ffabc396636d3e}
+
+
+Deplace le batiment suivant la direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & La direction voulue \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBatimentExterieur_a0f7131a58c2a36bfd7889409da5e2383}{\index{Batiment\-Exterieur@{Batiment\-Exterieur}!est\-Ferme@{est\-Ferme}}
+\index{est\-Ferme@{est\-Ferme}!BatimentExterieur@{Batiment\-Exterieur}}
+\subsubsection[{est\-Ferme}]{\setlength{\rightskip}{0pt plus 5cm}bool Batiment\-Exterieur\-::est\-Ferme (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBatimentExterieur_a0f7131a58c2a36bfd7889409da5e2383}
+
+
+Permet de savoir si le batiment est fermé 
+
+\begin{DoxyReturn}{Returns}
+!ouvert\-\_\- 
+\end{DoxyReturn}
+\hypertarget{classBatimentExterieur_a89e6aa6f39f9fa960ece00289325ef96}{\index{Batiment\-Exterieur@{Batiment\-Exterieur}!est\-Ouvert@{est\-Ouvert}}
+\index{est\-Ouvert@{est\-Ouvert}!BatimentExterieur@{Batiment\-Exterieur}}
+\subsubsection[{est\-Ouvert}]{\setlength{\rightskip}{0pt plus 5cm}bool Batiment\-Exterieur\-::est\-Ouvert (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBatimentExterieur_a89e6aa6f39f9fa960ece00289325ef96}
+
+
+Permet de savoir si le batiment est ouvert. 
+
+\begin{DoxyReturn}{Returns}
+ouvert\-\_\- 
+\end{DoxyReturn}
+\hypertarget{classBatimentExterieur_a0837a7b3fe1e4a1d4fb5f10c0522c0ce}{\index{Batiment\-Exterieur@{Batiment\-Exterieur}!get\-Interieur@{get\-Interieur}}
+\index{get\-Interieur@{get\-Interieur}!BatimentExterieur@{Batiment\-Exterieur}}
+\subsubsection[{get\-Interieur}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Batiment\-Interieur} $\ast$ Batiment\-Exterieur\-::get\-Interieur (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBatimentExterieur_a0837a7b3fe1e4a1d4fb5f10c0522c0ce}
+
+
+Getter sur l'interieur du batiment. 
+
+\begin{DoxyReturn}{Returns}
+interieur\-\_\- 
+\end{DoxyReturn}
+\hypertarget{classBatimentExterieur_ae11a31a7867fe7f87db1592dd7104786}{\index{Batiment\-Exterieur@{Batiment\-Exterieur}!get\-Position\-Porte@{get\-Position\-Porte}}
+\index{get\-Position\-Porte@{get\-Position\-Porte}!BatimentExterieur@{Batiment\-Exterieur}}
+\subsubsection[{get\-Position\-Porte}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Vector2f Batiment\-Exterieur\-::get\-Position\-Porte (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBatimentExterieur_ae11a31a7867fe7f87db1592dd7104786}
+
+
+Getter sur la position de la porte (position du rectangle la représentant) 
+
+\begin{DoxyReturn}{Returns}
+porte\-\_\-.\-get\-Position() 
+\end{DoxyReturn}
+\hypertarget{classBatimentExterieur_ac85920cb049dfafdbcdf0a8a70b2d2fb}{\index{Batiment\-Exterieur@{Batiment\-Exterieur}!get\-Taille@{get\-Taille}}
+\index{get\-Taille@{get\-Taille}!BatimentExterieur@{Batiment\-Exterieur}}
+\subsubsection[{get\-Taille}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Vector2f Batiment\-Exterieur\-::get\-Taille (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBatimentExterieur_ac85920cb049dfafdbcdf0a8a70b2d2fb}
+
+
+Getter sur la taille. 
+
+\begin{DoxyReturn}{Returns}
+taille\-\_\- 
+\end{DoxyReturn}
+\hypertarget{classBatimentExterieur_a6fb757558a77b6b84fd7f5fe5f60b4f9}{\index{Batiment\-Exterieur@{Batiment\-Exterieur}!get\-Taille\-Porte@{get\-Taille\-Porte}}
+\index{get\-Taille\-Porte@{get\-Taille\-Porte}!BatimentExterieur@{Batiment\-Exterieur}}
+\subsubsection[{get\-Taille\-Porte}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Vector2f Batiment\-Exterieur\-::get\-Taille\-Porte (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBatimentExterieur_a6fb757558a77b6b84fd7f5fe5f60b4f9}
+
+
+Getter sur la taille de la porte. 
+
+\begin{DoxyReturn}{Returns}
+taille\-Porte\-\_\- 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classBatimentExterieur_ada8bdedf97824310bc6464ab99f2841a}{\index{Batiment\-Exterieur@{Batiment\-Exterieur}!espace\-Fen\-\_\-@{espace\-Fen\-\_\-}}
+\index{espace\-Fen\-\_\-@{espace\-Fen\-\_\-}!BatimentExterieur@{Batiment\-Exterieur}}
+\subsubsection[{espace\-Fen\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Vector2f Batiment\-Exterieur\-::espace\-Fen\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classBatimentExterieur_ada8bdedf97824310bc6464ab99f2841a}
+\hyperlink{namespaceEspace}{Espace} entre 2 fenetres \hypertarget{classBatimentExterieur_af4fc6e80ed2a6eb26264697d9cd752a4}{\index{Batiment\-Exterieur@{Batiment\-Exterieur}!etage\-\_\-@{etage\-\_\-}}
+\index{etage\-\_\-@{etage\-\_\-}!BatimentExterieur@{Batiment\-Exterieur}}
+\subsubsection[{etage\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Batiment\-Exterieur\-::etage\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classBatimentExterieur_af4fc6e80ed2a6eb26264697d9cd752a4}
+Nombre d'étages \hypertarget{classBatimentExterieur_a8987b811e7ed4e6d535af016d8313a39}{\index{Batiment\-Exterieur@{Batiment\-Exterieur}!fen\-\_\-@{fen\-\_\-}}
+\index{fen\-\_\-@{fen\-\_\-}!BatimentExterieur@{Batiment\-Exterieur}}
+\subsubsection[{fen\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$sf\-::\-Rectangle\-Shape$>$ Batiment\-Exterieur\-::fen\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classBatimentExterieur_a8987b811e7ed4e6d535af016d8313a39}
+Ensemble de toutes les fenetres \hypertarget{classBatimentExterieur_a777ffd957176d89835f51c94ee5f7c3f}{\index{Batiment\-Exterieur@{Batiment\-Exterieur}!interieur\-\_\-@{interieur\-\_\-}}
+\index{interieur\-\_\-@{interieur\-\_\-}!BatimentExterieur@{Batiment\-Exterieur}}
+\subsubsection[{interieur\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Batiment\-Interieur}$\ast$ Batiment\-Exterieur\-::interieur\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classBatimentExterieur_a777ffd957176d89835f51c94ee5f7c3f}
+Pointeur vers l'interieur du batiment \hypertarget{classBatimentExterieur_a6929037a2c2ab1893c4992452454e7f6}{\index{Batiment\-Exterieur@{Batiment\-Exterieur}!mur\-\_\-@{mur\-\_\-}}
+\index{mur\-\_\-@{mur\-\_\-}!BatimentExterieur@{Batiment\-Exterieur}}
+\subsubsection[{mur\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Rectangle\-Shape Batiment\-Exterieur\-::mur\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classBatimentExterieur_a6929037a2c2ab1893c4992452454e7f6}
+Le rectangle représentant le mur \hypertarget{classBatimentExterieur_a67bacf13a8f3a238d89d8685a750ff40}{\index{Batiment\-Exterieur@{Batiment\-Exterieur}!nb\-Fen\-Largeur\-\_\-@{nb\-Fen\-Largeur\-\_\-}}
+\index{nb\-Fen\-Largeur\-\_\-@{nb\-Fen\-Largeur\-\_\-}!BatimentExterieur@{Batiment\-Exterieur}}
+\subsubsection[{nb\-Fen\-Largeur\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Batiment\-Exterieur\-::nb\-Fen\-Largeur\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classBatimentExterieur_a67bacf13a8f3a238d89d8685a750ff40}
+Nembre de fenetres \hypertarget{classBatimentExterieur_a10dcc22bae2b39269bbcb0318430305c}{\index{Batiment\-Exterieur@{Batiment\-Exterieur}!ouvert\-\_\-@{ouvert\-\_\-}}
+\index{ouvert\-\_\-@{ouvert\-\_\-}!BatimentExterieur@{Batiment\-Exterieur}}
+\subsubsection[{ouvert\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool Batiment\-Exterieur\-::ouvert\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classBatimentExterieur_a10dcc22bae2b39269bbcb0318430305c}
+Booléen qui prend vrai si le batiment est ouvert \hypertarget{classBatimentExterieur_a175feefa144902956539361a17be4b4b}{\index{Batiment\-Exterieur@{Batiment\-Exterieur}!porte\-\_\-@{porte\-\_\-}}
+\index{porte\-\_\-@{porte\-\_\-}!BatimentExterieur@{Batiment\-Exterieur}}
+\subsubsection[{porte\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Rectangle\-Shape Batiment\-Exterieur\-::porte\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classBatimentExterieur_a175feefa144902956539361a17be4b4b}
+Le rectangle représentant la porte \hypertarget{classBatimentExterieur_aba1fa0abfce890e24e93619a4a52ab62}{\index{Batiment\-Exterieur@{Batiment\-Exterieur}!taille\-\_\-@{taille\-\_\-}}
+\index{taille\-\_\-@{taille\-\_\-}!BatimentExterieur@{Batiment\-Exterieur}}
+\subsubsection[{taille\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Vector2f Batiment\-Exterieur\-::taille\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classBatimentExterieur_aba1fa0abfce890e24e93619a4a52ab62}
+Taille du batiment \hypertarget{classBatimentExterieur_a9f70a87570723674f6e1f383942248ef}{\index{Batiment\-Exterieur@{Batiment\-Exterieur}!taille\-Fen\-\_\-@{taille\-Fen\-\_\-}}
+\index{taille\-Fen\-\_\-@{taille\-Fen\-\_\-}!BatimentExterieur@{Batiment\-Exterieur}}
+\subsubsection[{taille\-Fen\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Vector2f Batiment\-Exterieur\-::taille\-Fen\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classBatimentExterieur_a9f70a87570723674f6e1f383942248ef}
+Taille d'une fenetre \hypertarget{classBatimentExterieur_afb8fac448d76a2c934a16ec0981f9004}{\index{Batiment\-Exterieur@{Batiment\-Exterieur}!taille\-Porte\-\_\-@{taille\-Porte\-\_\-}}
+\index{taille\-Porte\-\_\-@{taille\-Porte\-\_\-}!BatimentExterieur@{Batiment\-Exterieur}}
+\subsubsection[{taille\-Porte\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Vector2f Batiment\-Exterieur\-::taille\-Porte\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classBatimentExterieur_afb8fac448d76a2c934a16ec0981f9004}
+Taille de la porte 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Source/\-Batiment/\hyperlink{BatimentExterieur_8h}{Batiment\-Exterieur.\-h}\item 
+Source/\-Batiment/\hyperlink{Batiment_2BatimentExterieur_8cpp}{Batiment\-Exterieur.\-cpp}\end{DoxyCompactItemize}

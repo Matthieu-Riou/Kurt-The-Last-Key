@@ -1,0 +1,138 @@
+\hypertarget{classAleatoire}{\section{Aleatoire Class Reference}
+\label{classAleatoire}\index{Aleatoire@{Aleatoire}}
+}
+
+
+Classe gérant l'aleatoire du jeu. Elle permet d'avoir une seule graine(déterminée par le temps courant ou envoyé en parametre) pour tout les aléatoires du jeu.  
+
+
+
+
+{\ttfamily \#include $<$Aleatoire.\-h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classAleatoire_a742971fbe2a5008c650f46b8b951e82f}{init} (int seed=time(N\-U\-L\-L))
+\begin{DoxyCompactList}\small\item\em Initialise l'instance de l'aléatoire. \end{DoxyCompactList}\item 
+static int \hyperlink{classAleatoire_abf148ef04a9cbce6240be7f532dcbbff}{get\-Next} (int min, int max)
+\begin{DoxyCompactList}\small\item\em Retourne un entier aléatoire. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAleatoire_a9d1fd69758c98ebeabd584e45d05b223}{Aleatoire} (int seed)
+\begin{DoxyCompactList}\small\item\em Constructeur privé de l'aléatoire. \end{DoxyCompactList}\item 
+int \hyperlink{classAleatoire_a7e261155fd493a94e012d66f35b6211b}{genere\-Int} (int min, int max)
+\begin{DoxyCompactList}\small\item\em Retourne un entier aléatoire. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classAleatoire_afd46e92555e9b25375c01342c72927e0}{seed\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classAleatoire}{Aleatoire} $\ast$ \hyperlink{classAleatoire_a415da84d4bb4487d0f0301809f311185}{instance\-\_\-} = N\-U\-L\-L
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe gérant l'aleatoire du jeu. Elle permet d'avoir une seule graine(déterminée par le temps courant ou envoyé en parametre) pour tout les aléatoires du jeu. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classAleatoire_a9d1fd69758c98ebeabd584e45d05b223}{\index{Aleatoire@{Aleatoire}!Aleatoire@{Aleatoire}}
+\index{Aleatoire@{Aleatoire}!Aleatoire@{Aleatoire}}
+\subsubsection[{Aleatoire}]{\setlength{\rightskip}{0pt plus 5cm}Aleatoire\-::\-Aleatoire (
+\begin{DoxyParamCaption}
+\item[{int}]{seed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classAleatoire_a9d1fd69758c98ebeabd584e45d05b223}
+
+
+Constructeur privé de l'aléatoire. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & La graine de l'aléatoire \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classAleatoire_a7e261155fd493a94e012d66f35b6211b}{\index{Aleatoire@{Aleatoire}!genere\-Int@{genere\-Int}}
+\index{genere\-Int@{genere\-Int}!Aleatoire@{Aleatoire}}
+\subsubsection[{genere\-Int}]{\setlength{\rightskip}{0pt plus 5cm}int Aleatoire\-::genere\-Int (
+\begin{DoxyParamCaption}
+\item[{int}]{min, }
+\item[{int}]{max}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classAleatoire_a7e261155fd493a94e012d66f35b6211b}
+
+
+Retourne un entier aléatoire. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & la valeur minimum voulue \\
+\hline
+{\em max} & la valeur maximal voulue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un entier aleatoire entre min et max exclu. Si max $<$= min, il ya une erreur 
+\end{DoxyReturn}
+\hypertarget{classAleatoire_abf148ef04a9cbce6240be7f532dcbbff}{\index{Aleatoire@{Aleatoire}!get\-Next@{get\-Next}}
+\index{get\-Next@{get\-Next}!Aleatoire@{Aleatoire}}
+\subsubsection[{get\-Next}]{\setlength{\rightskip}{0pt plus 5cm}int Aleatoire\-::get\-Next (
+\begin{DoxyParamCaption}
+\item[{int}]{min, }
+\item[{int}]{max}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classAleatoire_abf148ef04a9cbce6240be7f532dcbbff}
+
+
+Retourne un entier aléatoire. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & la valeur minimum voulue \\
+\hline
+{\em max} & la valeur maximal voulue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un entier aleatoire entre min et max exclu. Si max $<$= min, il ya une erreur 
+\end{DoxyReturn}
+\hypertarget{classAleatoire_a742971fbe2a5008c650f46b8b951e82f}{\index{Aleatoire@{Aleatoire}!init@{init}}
+\index{init@{init}!Aleatoire@{Aleatoire}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Aleatoire\-::init (
+\begin{DoxyParamCaption}
+\item[{int}]{seed = {\ttfamily time(NULL)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classAleatoire_a742971fbe2a5008c650f46b8b951e82f}
+
+
+Initialise l'instance de l'aléatoire. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & La graine voulu (par défaut le temps courant) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classAleatoire_a415da84d4bb4487d0f0301809f311185}{\index{Aleatoire@{Aleatoire}!instance\-\_\-@{instance\-\_\-}}
+\index{instance\-\_\-@{instance\-\_\-}!Aleatoire@{Aleatoire}}
+\subsubsection[{instance\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Aleatoire} $\ast$ Aleatoire\-::instance\-\_\- = N\-U\-L\-L\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classAleatoire_a415da84d4bb4487d0f0301809f311185}
+L'instance de l'Aléatoire
+
+On initialise l'instance à N\-U\-L\-L \hypertarget{classAleatoire_afd46e92555e9b25375c01342c72927e0}{\index{Aleatoire@{Aleatoire}!seed\-\_\-@{seed\-\_\-}}
+\index{seed\-\_\-@{seed\-\_\-}!Aleatoire@{Aleatoire}}
+\subsubsection[{seed\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Aleatoire\-::seed\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classAleatoire_afd46e92555e9b25375c01342c72927e0}
+La graine utilisée 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Source/\hyperlink{Aleatoire_8h}{Aleatoire.\-h}\item 
+Source/\hyperlink{Aleatoire_8cpp}{Aleatoire.\-cpp}\end{DoxyCompactItemize}

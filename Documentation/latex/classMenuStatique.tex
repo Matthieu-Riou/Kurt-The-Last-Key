@@ -1,0 +1,100 @@
+\hypertarget{classMenuStatique}{\section{Menu\-Statique Class Reference}
+\label{classMenuStatique}\index{Menu\-Statique@{Menu\-Statique}}
+}
+
+
+Classe du menu affiché sous la map courante.  
+
+
+
+
+{\ttfamily \#include $<$Menu\-Statique.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMenuStatique_aedb0c7d0fb7f30e9cc37fbe88cc28d16}{Menu\-Statique} (\hyperlink{classConteneurPersonnage}{Conteneur\-Personnage} $\ast$perso)
+\begin{DoxyCompactList}\small\item\em Constructeur de \hyperlink{classMenuStatique}{Menu\-Statique}, definit l'\hyperlink{classInventaireStatique}{Inventaire\-Statique} et fixe la view. \end{DoxyCompactList}\item 
+void \hyperlink{classMenuStatique_a5ed3172bd8b6a96e850020f1d85cfc00}{update} (sf\-::\-Render\-Window const \&app)
+\begin{DoxyCompactList}\small\item\em Lance la détection des entrées utilisateur (souris) \end{DoxyCompactList}\item 
+void \hyperlink{classMenuStatique_a8ec5aa4019c4f07943ef51113fda6985}{afficher} (sf\-::\-Render\-Window \&app) const 
+\begin{DoxyCompactList}\small\item\em Affiche le menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\-::\-View \hyperlink{classMenuStatique_af2673da57cc312dd087610d79866e0d0}{view\-Menu\-\_\-}
+\item 
+\hyperlink{classInventaireStatique}{Inventaire\-Statique} \hyperlink{classMenuStatique_a48d87feb8de5baafb4ba5881b3d2b67f}{inventaire\-Statique\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe du menu affiché sous la map courante. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMenuStatique_aedb0c7d0fb7f30e9cc37fbe88cc28d16}{\index{Menu\-Statique@{Menu\-Statique}!Menu\-Statique@{Menu\-Statique}}
+\index{Menu\-Statique@{Menu\-Statique}!MenuStatique@{Menu\-Statique}}
+\subsubsection[{Menu\-Statique}]{\setlength{\rightskip}{0pt plus 5cm}Menu\-Statique\-::\-Menu\-Statique (
+\begin{DoxyParamCaption}
+\item[{{\bf Conteneur\-Personnage} $\ast$}]{perso}
+\end{DoxyParamCaption}
+)}}\label{classMenuStatique_aedb0c7d0fb7f30e9cc37fbe88cc28d16}
+
+
+Constructeur de \hyperlink{classMenuStatique}{Menu\-Statique}, definit l'\hyperlink{classInventaireStatique}{Inventaire\-Statique} et fixe la view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em perso} & Le \hyperlink{classPersonnage}{Personnage} du joueur dont on doit afficher les informations \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMenuStatique_a8ec5aa4019c4f07943ef51113fda6985}{\index{Menu\-Statique@{Menu\-Statique}!afficher@{afficher}}
+\index{afficher@{afficher}!MenuStatique@{Menu\-Statique}}
+\subsubsection[{afficher}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\-Statique\-::afficher (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Render\-Window \&}]{app}
+\end{DoxyParamCaption}
+) const}}\label{classMenuStatique_a8ec5aa4019c4f07943ef51113fda6985}
+
+
+Affiche le menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app} & La fenetre du jeu \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMenuStatique_a5ed3172bd8b6a96e850020f1d85cfc00}{\index{Menu\-Statique@{Menu\-Statique}!update@{update}}
+\index{update@{update}!MenuStatique@{Menu\-Statique}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\-Statique\-::update (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Render\-Window const \&}]{app}
+\end{DoxyParamCaption}
+)}}\label{classMenuStatique_a5ed3172bd8b6a96e850020f1d85cfc00}
+
+
+Lance la détection des entrées utilisateur (souris) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app} & La fenetre du jeu \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classMenuStatique_a48d87feb8de5baafb4ba5881b3d2b67f}{\index{Menu\-Statique@{Menu\-Statique}!inventaire\-Statique\-\_\-@{inventaire\-Statique\-\_\-}}
+\index{inventaire\-Statique\-\_\-@{inventaire\-Statique\-\_\-}!MenuStatique@{Menu\-Statique}}
+\subsubsection[{inventaire\-Statique\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Inventaire\-Statique} Menu\-Statique\-::inventaire\-Statique\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classMenuStatique_a48d87feb8de5baafb4ba5881b3d2b67f}
+L'inventaire à afficher \hypertarget{classMenuStatique_af2673da57cc312dd087610d79866e0d0}{\index{Menu\-Statique@{Menu\-Statique}!view\-Menu\-\_\-@{view\-Menu\-\_\-}}
+\index{view\-Menu\-\_\-@{view\-Menu\-\_\-}!MenuStatique@{Menu\-Statique}}
+\subsubsection[{view\-Menu\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-View Menu\-Statique\-::view\-Menu\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classMenuStatique_af2673da57cc312dd087610d79866e0d0}
+La view controllant l'affichage du menu 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Source/\-Statique/\hyperlink{MenuStatique_8h}{Menu\-Statique.\-h}\item 
+Source/\-Statique/\hyperlink{MenuStatique_8cpp}{Menu\-Statique.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,105 @@
+\hypertarget{classInventaireStatique}{\section{Inventaire\-Statique Class Reference}
+\label{classInventaireStatique}\index{Inventaire\-Statique@{Inventaire\-Statique}}
+}
+
+
+Classe héritant de \hyperlink{classObserver}{Observer$<$\-Inventaire$>$}, elle observe donc un inventaire.  
+
+
+
+
+{\ttfamily \#include $<$Inventaire\-Statique.\-h$>$}
+
+Inheritance diagram for Inventaire\-Statique\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classInventaireStatique}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classInventaireStatique_a5b4488dd115644006be4b7858ff6353e}{Inventaire\-Statique} (\hyperlink{classConteneurPersonnage}{Conteneur\-Personnage} $\ast$inventaire)
+\begin{DoxyCompactList}\small\item\em Constructeur d'\hyperlink{classInventaireStatique}{Inventaire\-Statique}, création du fond, du tableau de sprites, initialisaton des attributs et enregistrement comme \hyperlink{classObserver}{Observer} du sujet. \end{DoxyCompactList}\item 
+\hypertarget{classInventaireStatique_a6dfb8ac47f036ae0e9eb227fd9a581d7}{void \hyperlink{classInventaireStatique_a6dfb8ac47f036ae0e9eb227fd9a581d7}{gestion\-Event} (sf\-::\-Render\-Window const \&app)}\label{classInventaireStatique_a6dfb8ac47f036ae0e9eb227fd9a581d7}
+
+\begin{DoxyCompactList}\small\item\em Gestion des entrées souris \-: clique de souris sur un objet. \end{DoxyCompactList}\item 
+\hypertarget{classInventaireStatique_a1f818ef7b002b5ecbea11a08a1f411dd}{virtual void \hyperlink{classInventaireStatique_a1f818ef7b002b5ecbea11a08a1f411dd}{actualiser} ()}\label{classInventaireStatique_a1f818ef7b002b5ecbea11a08a1f411dd}
+
+\begin{DoxyCompactList}\small\item\em Actualise la liste d'objets en regardant le sujet. \end{DoxyCompactList}\item 
+void \hyperlink{classInventaireStatique_a6ecc65a6cd182cecffb56d247ca5fb84}{afficher} (sf\-::\-Render\-Window \&app) const 
+\begin{DoxyCompactList}\small\item\em Affiche l'inventaire. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\-::\-Rectangle\-Shape \hyperlink{classInventaireStatique_ade4aafc789b65459ca3e1e7473c50ed7}{fond\-\_\-}
+\item 
+unsigned int \hyperlink{classInventaireStatique_a45caa667122e48be58b376e4b4a8f0b8}{nb\-Objet\-Max\-\_\-}
+\item 
+std\-::vector$<$ sf\-::\-Sprite $>$ \hyperlink{classInventaireStatique_a477fb2f26532acbfca2e1a96288668ee}{sprite\-\_\-}
+\item 
+bool \hyperlink{classInventaireStatique_a6ac9746f410426a3fff7a8024e9f4398}{mouse\-Pressed\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Classe héritant de \hyperlink{classObserver}{Observer$<$\-Inventaire$>$}, elle observe donc un inventaire. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classInventaireStatique_a5b4488dd115644006be4b7858ff6353e}{\index{Inventaire\-Statique@{Inventaire\-Statique}!Inventaire\-Statique@{Inventaire\-Statique}}
+\index{Inventaire\-Statique@{Inventaire\-Statique}!InventaireStatique@{Inventaire\-Statique}}
+\subsubsection[{Inventaire\-Statique}]{\setlength{\rightskip}{0pt plus 5cm}Inventaire\-Statique\-::\-Inventaire\-Statique (
+\begin{DoxyParamCaption}
+\item[{{\bf Conteneur\-Personnage} $\ast$}]{perso}
+\end{DoxyParamCaption}
+)}}\label{classInventaireStatique_a5b4488dd115644006be4b7858ff6353e}
+
+
+Constructeur d'\hyperlink{classInventaireStatique}{Inventaire\-Statique}, création du fond, du tableau de sprites, initialisaton des attributs et enregistrement comme \hyperlink{classObserver}{Observer} du sujet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em perso} & Le proprietaire de l'inventaire à observer \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classInventaireStatique_a6ecc65a6cd182cecffb56d247ca5fb84}{\index{Inventaire\-Statique@{Inventaire\-Statique}!afficher@{afficher}}
+\index{afficher@{afficher}!InventaireStatique@{Inventaire\-Statique}}
+\subsubsection[{afficher}]{\setlength{\rightskip}{0pt plus 5cm}void Inventaire\-Statique\-::afficher (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Render\-Window \&}]{app}
+\end{DoxyParamCaption}
+) const}}\label{classInventaireStatique_a6ecc65a6cd182cecffb56d247ca5fb84}
+
+
+Affiche l'inventaire. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app} & La fenetre du jeu \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classInventaireStatique_ade4aafc789b65459ca3e1e7473c50ed7}{\index{Inventaire\-Statique@{Inventaire\-Statique}!fond\-\_\-@{fond\-\_\-}}
+\index{fond\-\_\-@{fond\-\_\-}!InventaireStatique@{Inventaire\-Statique}}
+\subsubsection[{fond\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Rectangle\-Shape Inventaire\-Statique\-::fond\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classInventaireStatique_ade4aafc789b65459ca3e1e7473c50ed7}
+Le fond de l'inventaire \hypertarget{classInventaireStatique_a6ac9746f410426a3fff7a8024e9f4398}{\index{Inventaire\-Statique@{Inventaire\-Statique}!mouse\-Pressed\-\_\-@{mouse\-Pressed\-\_\-}}
+\index{mouse\-Pressed\-\_\-@{mouse\-Pressed\-\_\-}!InventaireStatique@{Inventaire\-Statique}}
+\subsubsection[{mouse\-Pressed\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}bool Inventaire\-Statique\-::mouse\-Pressed\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classInventaireStatique_a6ac9746f410426a3fff7a8024e9f4398}
+Boolen permettant de gérer les multiples evenements lors d'un seul clique \hypertarget{classInventaireStatique_a45caa667122e48be58b376e4b4a8f0b8}{\index{Inventaire\-Statique@{Inventaire\-Statique}!nb\-Objet\-Max\-\_\-@{nb\-Objet\-Max\-\_\-}}
+\index{nb\-Objet\-Max\-\_\-@{nb\-Objet\-Max\-\_\-}!InventaireStatique@{Inventaire\-Statique}}
+\subsubsection[{nb\-Objet\-Max\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Inventaire\-Statique\-::nb\-Objet\-Max\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classInventaireStatique_a45caa667122e48be58b376e4b4a8f0b8}
+Le nombre maximum d'objets \hypertarget{classInventaireStatique_a477fb2f26532acbfca2e1a96288668ee}{\index{Inventaire\-Statique@{Inventaire\-Statique}!sprite\-\_\-@{sprite\-\_\-}}
+\index{sprite\-\_\-@{sprite\-\_\-}!InventaireStatique@{Inventaire\-Statique}}
+\subsubsection[{sprite\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$sf\-::\-Sprite$>$ Inventaire\-Statique\-::sprite\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classInventaireStatique_a477fb2f26532acbfca2e1a96288668ee}
+Ensemble des sprites 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Source/\-Statique/\hyperlink{InventaireStatique_8h}{Inventaire\-Statique.\-h}\item 
+Source/\-Statique/\hyperlink{Statique_2InventaireStatique_8cpp}{Inventaire\-Statique.\-cpp}\end{DoxyCompactItemize}

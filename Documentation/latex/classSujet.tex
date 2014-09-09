@@ -1,0 +1,74 @@
+\hypertarget{classSujet}{\section{Sujet$<$ O $>$ Class Template Reference}
+\label{classSujet}\index{Sujet$<$ O $>$@{Sujet$<$ O $>$}}
+}
+
+
+Classe utilisant des templates représentant les sujets d'objets de type O.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classSujet_aca7d9e3c76913bb93e8d355cbd476a2a}{enregistrer\-Obs} (O $\ast$observer)
+\begin{DoxyCompactList}\small\item\em Ajoute un observer. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classSujet_a6b7876a84608c2ffd61d5d61589ae2e8}{supprimer\-Obs} (O $\ast$observer)
+\begin{DoxyCompactList}\small\item\em Supprime un observer. \end{DoxyCompactList}\item 
+\hypertarget{classSujet_a74899bddc50941d8d360afb6025a5b88}{virtual void \hyperlink{classSujet_a74899bddc50941d8d360afb6025a5b88}{notifier\-Obs} ()}\label{classSujet_a74899bddc50941d8d360afb6025a5b88}
+
+\begin{DoxyCompactList}\small\item\em Actualise tous les observers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::list$<$ O $\ast$ $>$ \hyperlink{classSujet_a12ee36985ce73e7d73e70da6fcf22e89}{observer\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename O$>$class Sujet$<$ O $>$}
+
+Classe utilisant des templates représentant les sujets d'objets de type O. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classSujet_aca7d9e3c76913bb93e8d355cbd476a2a}{\index{Sujet@{Sujet}!enregistrer\-Obs@{enregistrer\-Obs}}
+\index{enregistrer\-Obs@{enregistrer\-Obs}!Sujet@{Sujet}}
+\subsubsection[{enregistrer\-Obs}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename O$>$ void {\bf Sujet}$<$ O $>$\-::enregistrer\-Obs (
+\begin{DoxyParamCaption}
+\item[{O $\ast$}]{observer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classSujet_aca7d9e3c76913bb93e8d355cbd476a2a}
+
+
+Ajoute un observer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & L'observer a ajouter \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSujet_a6b7876a84608c2ffd61d5d61589ae2e8}{\index{Sujet@{Sujet}!supprimer\-Obs@{supprimer\-Obs}}
+\index{supprimer\-Obs@{supprimer\-Obs}!Sujet@{Sujet}}
+\subsubsection[{supprimer\-Obs}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename O$>$ void {\bf Sujet}$<$ O $>$\-::supprimer\-Obs (
+\begin{DoxyParamCaption}
+\item[{O $\ast$}]{observer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classSujet_a6b7876a84608c2ffd61d5d61589ae2e8}
+
+
+Supprime un observer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & L'observer a supprimer \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classSujet_a12ee36985ce73e7d73e70da6fcf22e89}{\index{Sujet@{Sujet}!observer\-\_\-@{observer\-\_\-}}
+\index{observer\-\_\-@{observer\-\_\-}!Sujet@{Sujet}}
+\subsubsection[{observer\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename O$>$ std\-::list$<$O$\ast$$>$ {\bf Sujet}$<$ O $>$\-::observer\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classSujet_a12ee36985ce73e7d73e70da6fcf22e89}
+La liste des observer 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+Source/\-Observer/\hyperlink{Sujet_8h}{Sujet.\-h}\end{DoxyCompactItemize}

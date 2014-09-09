@@ -1,0 +1,210 @@
+\hypertarget{classExterieur}{\section{Exterieur Class Reference}
+\label{classExterieur}\index{Exterieur@{Exterieur}}
+}
+
+
+Classe héritant de \hyperlink{classMap}{Map} représentant le monde extérieur (extérieur des batiments)  
+
+
+
+
+{\ttfamily \#include $<$Exterieur.\-h$>$}
+
+Inheritance diagram for Exterieur\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classExterieur}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classExterieur_a8d35b43350b8d273043bfc9704c50e67}{Exterieur} (int difficulte, \hyperlink{classConteneurPersonnage}{Conteneur\-Personnage} $\ast$perso)
+\begin{DoxyCompactList}\small\item\em Constructeur d'\hyperlink{classExterieur}{Exterieur} Crée aléatoirement de batiments puis crée le ciel et les éléments de décors. \end{DoxyCompactList}\item 
+\hypertarget{classExterieur_a98dd5cc5591c46b7f148738dbb18842d}{virtual \hyperlink{classExterieur_a98dd5cc5591c46b7f148738dbb18842d}{$\sim$\-Exterieur} ()}\label{classExterieur_a98dd5cc5591c46b7f148738dbb18842d}
+
+\begin{DoxyCompactList}\small\item\em Destructeur d'\hyperlink{classExterieur}{Exterieur} Détruit les décors, les batiments et le personnage. \end{DoxyCompactList}\item 
+\hypertarget{classExterieur_af2a11d0728389f34d9e3e27d9bf0b30e}{virtual void \hyperlink{classExterieur_af2a11d0728389f34d9e3e27d9bf0b30e}{sortir} ()}\label{classExterieur_af2a11d0728389f34d9e3e27d9bf0b30e}
+
+\begin{DoxyCompactList}\small\item\em Appel à \hyperlink{classMap_a483d996c2d56cf7af870bde2a63423dc}{Map\-::sortir()} \end{DoxyCompactList}\item 
+virtual void \hyperlink{classExterieur_a046ad698b3a16809b6213459a8d2cb3f}{add\-Objet} (\hyperlink{classObjet}{Objet} $\ast$o)
+\begin{DoxyCompactList}\small\item\em Ajoute un objet à une position aléatoire dans la map. \end{DoxyCompactList}\item 
+\hypertarget{classExterieur_ae412ede4d4f1e3bcbb50100c20ad8225}{virtual void \hyperlink{classExterieur_ae412ede4d4f1e3bcbb50100c20ad8225}{gestion\-Event} ()}\label{classExterieur_ae412ede4d4f1e3bcbb50100c20ad8225}
+
+\begin{DoxyCompactList}\small\item\em Gére les entrées clavier si il s'agit de la map courante. \end{DoxyCompactList}\item 
+\hypertarget{classExterieur_af79fb987ffc8c8a5ec73086929eb2f69}{virtual void \hyperlink{classExterieur_af79fb987ffc8c8a5ec73086929eb2f69}{update} ()}\label{classExterieur_af79fb987ffc8c8a5ec73086929eb2f69}
+
+\begin{DoxyCompactList}\small\item\em Actualise les éléments de la map (le personnage, les décors) et lance \hyperlink{classExterieur_ae412ede4d4f1e3bcbb50100c20ad8225}{gestion\-Event()} (gestion entrées clavier) s'il s'agit de la map courante. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classExterieur_a531b6ba1b46d2da431fd10911c54c49c}{deplacer} (\hyperlink{Espace_8h_a7cf6e8c5a5bc5e7b2afef3647870b1c4}{Dir} d)
+\begin{DoxyCompactList}\small\item\em Déplace le personnage en fonction de la direction puis test s'il gagne un objet. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classExterieur_ac06a6939f2998926160d4ccf11cc8498}{afficher} (sf\-::\-Render\-Window \&app) const 
+\begin{DoxyCompactList}\small\item\em Affiche l'extérieur (le ciel, les decors, les objets, les batiments et le personnage) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classExterieur_a33c63ec64c706463932bf18299d77ae4}{void \hyperlink{classExterieur_a33c63ec64c706463932bf18299d77ae4}{generer\-Decor\-Sol} ()}\label{classExterieur_a33c63ec64c706463932bf18299d77ae4}
+
+\begin{DoxyCompactList}\small\item\em Génère des décors pour le sol (arbres et rochers) et leurs attribut des positions aléatoires (en x) \end{DoxyCompactList}\item 
+\hypertarget{classExterieur_a79fcb5aa608d8045ef44f41c6055cda9}{void \hyperlink{classExterieur_a79fcb5aa608d8045ef44f41c6055cda9}{generer\-Decor\-Air} ()}\label{classExterieur_a79fcb5aa608d8045ef44f41c6055cda9}
+
+\begin{DoxyCompactList}\small\item\em Génère des décors du ciel (nuages) et leurs attribut des positions aléatoires (en x) \end{DoxyCompactList}\item 
+int \hyperlink{classExterieur_a1bfe7da5e31f13adcdeb8e5ea93b6036}{generer\-Batiment} (int nb\-Batiment)
+\begin{DoxyCompactList}\small\item\em Génère nb batiments et génère les clés associés. \end{DoxyCompactList}\item 
+void \hyperlink{classExterieur_aa50361e549b69bf0654f617d55e84122}{generer\-Cle} (int nb\-Batiment)
+\begin{DoxyCompactList}\small\item\em Crée des clés, les places dans les batiments et ferme des batiments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\-::\-Rectangle\-Shape \hyperlink{classExterieur_a32c931a8689eb6b937049c23a1b5c3e6}{fond\-\_\-}
+\item 
+std\-::list$<$ \hyperlink{classDecor}{Decor} $\ast$ $>$ \hyperlink{classExterieur_af1e89656a647fc1bfc179c4910a7f40d}{decor\-\_\-}
+\item 
+int \hyperlink{classExterieur_a99f4d23bbf9ed4df9e4e091acacd3d5f}{longueur\-\_\-}
+\item 
+std\-::vector$<$ \hyperlink{classBatimentExterieur}{Batiment\-Exterieur} $\ast$ $>$ \hyperlink{classExterieur_a172e012b882189a95932a48f15338f3b}{batiments\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Classe héritant de \hyperlink{classMap}{Map} représentant le monde extérieur (extérieur des batiments) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classExterieur_a8d35b43350b8d273043bfc9704c50e67}{\index{Exterieur@{Exterieur}!Exterieur@{Exterieur}}
+\index{Exterieur@{Exterieur}!Exterieur@{Exterieur}}
+\subsubsection[{Exterieur}]{\setlength{\rightskip}{0pt plus 5cm}Exterieur\-::\-Exterieur (
+\begin{DoxyParamCaption}
+\item[{int}]{difficulte, }
+\item[{{\bf Conteneur\-Personnage} $\ast$}]{perso}
+\end{DoxyParamCaption}
+)}}\label{classExterieur_a8d35b43350b8d273043bfc9704c50e67}
+
+
+Constructeur d'\hyperlink{classExterieur}{Exterieur} Crée aléatoirement de batiments puis crée le ciel et les éléments de décors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em difficulte} & Permet de faire varier la difficulter (nombre de batiments) \\
+\hline
+{\em perso} & Le personnage qui évolue dans cette map \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classExterieur_a046ad698b3a16809b6213459a8d2cb3f}{\index{Exterieur@{Exterieur}!add\-Objet@{add\-Objet}}
+\index{add\-Objet@{add\-Objet}!Exterieur@{Exterieur}}
+\subsubsection[{add\-Objet}]{\setlength{\rightskip}{0pt plus 5cm}void Exterieur\-::add\-Objet (
+\begin{DoxyParamCaption}
+\item[{{\bf Objet} $\ast$}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classExterieur_a046ad698b3a16809b6213459a8d2cb3f}
+
+
+Ajoute un objet à une position aléatoire dans la map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & L'objet à ajouter \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classMap_aa915b4b184fd8e610f1406758d719eb3}{Map}.
+
+\hypertarget{classExterieur_ac06a6939f2998926160d4ccf11cc8498}{\index{Exterieur@{Exterieur}!afficher@{afficher}}
+\index{afficher@{afficher}!Exterieur@{Exterieur}}
+\subsubsection[{afficher}]{\setlength{\rightskip}{0pt plus 5cm}void Exterieur\-::afficher (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Render\-Window \&}]{app}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classExterieur_ac06a6939f2998926160d4ccf11cc8498}
+
+
+Affiche l'extérieur (le ciel, les decors, les objets, les batiments et le personnage) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app} & La fenetre du jeu \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classMap_a1485990ae9a46afcf7964a600d9a5386}{Map}.
+
+\hypertarget{classExterieur_a531b6ba1b46d2da431fd10911c54c49c}{\index{Exterieur@{Exterieur}!deplacer@{deplacer}}
+\index{deplacer@{deplacer}!Exterieur@{Exterieur}}
+\subsubsection[{deplacer}]{\setlength{\rightskip}{0pt plus 5cm}void Exterieur\-::deplacer (
+\begin{DoxyParamCaption}
+\item[{{\bf Dir}}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classExterieur_a531b6ba1b46d2da431fd10911c54c49c}
+
+
+Déplace le personnage en fonction de la direction puis test s'il gagne un objet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & La direction du mouvement \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classMap_af3cf5fb88bc1fb355ed1465a8245769b}{Map}.
+
+\hypertarget{classExterieur_a1bfe7da5e31f13adcdeb8e5ea93b6036}{\index{Exterieur@{Exterieur}!generer\-Batiment@{generer\-Batiment}}
+\index{generer\-Batiment@{generer\-Batiment}!Exterieur@{Exterieur}}
+\subsubsection[{generer\-Batiment}]{\setlength{\rightskip}{0pt plus 5cm}int Exterieur\-::generer\-Batiment (
+\begin{DoxyParamCaption}
+\item[{int}]{nb\-Batiment}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classExterieur_a1bfe7da5e31f13adcdeb8e5ea93b6036}
+
+
+Génère nb batiments et génère les clés associés. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nb\-Batiment} & Le nombre de batiments voulus \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La longueur obtenue pour créer les batiments 
+\end{DoxyReturn}
+\hypertarget{classExterieur_aa50361e549b69bf0654f617d55e84122}{\index{Exterieur@{Exterieur}!generer\-Cle@{generer\-Cle}}
+\index{generer\-Cle@{generer\-Cle}!Exterieur@{Exterieur}}
+\subsubsection[{generer\-Cle}]{\setlength{\rightskip}{0pt plus 5cm}void Exterieur\-::generer\-Cle (
+\begin{DoxyParamCaption}
+\item[{int}]{nb\-Batiment}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classExterieur_aa50361e549b69bf0654f617d55e84122}
+
+
+Crée des clés, les places dans les batiments et ferme des batiments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nb\-Batiment} & Le nombre de batiments voulus \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classExterieur_a172e012b882189a95932a48f15338f3b}{\index{Exterieur@{Exterieur}!batiments\-\_\-@{batiments\-\_\-}}
+\index{batiments\-\_\-@{batiments\-\_\-}!Exterieur@{Exterieur}}
+\subsubsection[{batiments\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf Batiment\-Exterieur}$\ast$$>$ Exterieur\-::batiments\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classExterieur_a172e012b882189a95932a48f15338f3b}
+Ensemble de \hyperlink{classBatimentExterieur}{Batiment\-Exterieur} \hypertarget{classExterieur_af1e89656a647fc1bfc179c4910a7f40d}{\index{Exterieur@{Exterieur}!decor\-\_\-@{decor\-\_\-}}
+\index{decor\-\_\-@{decor\-\_\-}!Exterieur@{Exterieur}}
+\subsubsection[{decor\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::list$<${\bf Decor}$\ast$$>$ Exterieur\-::decor\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classExterieur_af1e89656a647fc1bfc179c4910a7f40d}
+Ensemble d'éléments de décors \hypertarget{classExterieur_a32c931a8689eb6b937049c23a1b5c3e6}{\index{Exterieur@{Exterieur}!fond\-\_\-@{fond\-\_\-}}
+\index{fond\-\_\-@{fond\-\_\-}!Exterieur@{Exterieur}}
+\subsubsection[{fond\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Rectangle\-Shape Exterieur\-::fond\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classExterieur_a32c931a8689eb6b937049c23a1b5c3e6}
+Le ciel \hypertarget{classExterieur_a99f4d23bbf9ed4df9e4e091acacd3d5f}{\index{Exterieur@{Exterieur}!longueur\-\_\-@{longueur\-\_\-}}
+\index{longueur\-\_\-@{longueur\-\_\-}!Exterieur@{Exterieur}}
+\subsubsection[{longueur\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Exterieur\-::longueur\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classExterieur_a99f4d23bbf9ed4df9e4e091acacd3d5f}
+La longueur de la map 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Source/\-Map/\hyperlink{Exterieur_8h}{Exterieur.\-h}\item 
+Source/\-Map/\hyperlink{Exterieur_8cpp}{Exterieur.\-cpp}\end{DoxyCompactItemize}

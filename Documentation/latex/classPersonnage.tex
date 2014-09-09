@@ -1,0 +1,412 @@
+\hypertarget{classPersonnage}{\section{Personnage Class Reference}
+\label{classPersonnage}\index{Personnage@{Personnage}}
+}
+
+
+Classe représentant un personnage du jeu.  
+
+
+
+
+{\ttfamily \#include $<$Personnage.\-h$>$}
+
+Inheritance diagram for Personnage\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classPersonnage}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPersonnage_a07c0b4b58965fe9c519978e2ddbb8e7f}{Personnage} (\hyperlink{classConteneurPersonnage}{Conteneur\-Personnage} $\ast$p, \hyperlink{Espace_8h_a7cf6e8c5a5bc5e7b2afef3647870b1c4}{Dir} d, sf\-::\-Vector2f taille, std\-::vector$<$ sf\-::\-Texture $\ast$ $>$ textures)
+\begin{DoxyCompactList}\small\item\em Constructeur de \hyperlink{classPersonnage}{Personnage}. \end{DoxyCompactList}\item 
+\hypertarget{classPersonnage_a05bdf2a469885bb1fbb6c2e8f98972ab}{virtual \hyperlink{classPersonnage_a05bdf2a469885bb1fbb6c2e8f98972ab}{$\sim$\-Personnage} ()}\label{classPersonnage_a05bdf2a469885bb1fbb6c2e8f98972ab}
+
+\begin{DoxyCompactList}\small\item\em Destructeur de \hyperlink{classPersonnage}{Personnage}, détruit tous les états. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classPersonnage_ac2f4809fdfe2354f9e249dccd00fe4bc}{essayer\-Ouvrir\-Batiment} (\hyperlink{classBatimentExterieur}{Batiment\-Exterieur} $\ast$bat)
+\begin{DoxyCompactList}\small\item\em Renvoie vrai si on a ouvert le batiment (on a la bonne clé) \end{DoxyCompactList}\item 
+\hypertarget{classPersonnage_a8ae64b31f29ee6a1239a628a7e1d9620}{virtual void \hyperlink{classPersonnage_a8ae64b31f29ee6a1239a628a7e1d9620}{ramasser} (\hyperlink{classObjet}{Objet} $\ast$objet)}\label{classPersonnage_a8ae64b31f29ee6a1239a628a7e1d9620}
+
+\begin{DoxyCompactList}\small\item\em Ajoute l'objet à l'inventaire. \end{DoxyCompactList}\item 
+\hypertarget{classPersonnage_a1ec8306749f543f4396d511bb8b80621}{virtual \hyperlink{classInventaire}{Inventaire} $\ast$ \hyperlink{classPersonnage_a1ec8306749f543f4396d511bb8b80621}{get\-Inventaire} ()}\label{classPersonnage_a1ec8306749f543f4396d511bb8b80621}
+
+\begin{DoxyCompactList}\small\item\em Getter sur l'inventaire. \end{DoxyCompactList}\item 
+\hypertarget{classPersonnage_a847e2fd380323d34fd3de056e93bfb0f}{virtual float \hyperlink{classPersonnage_a847e2fd380323d34fd3de056e93bfb0f}{get\-Vitesse} () const }\label{classPersonnage_a847e2fd380323d34fd3de056e93bfb0f}
+
+\begin{DoxyCompactList}\small\item\em Getter sur la vitesse. \end{DoxyCompactList}\item 
+\hypertarget{classPersonnage_ab12b6ad72071cad9d57a1e8942729386}{virtual sf\-::\-Vector2f \hyperlink{classPersonnage_ab12b6ad72071cad9d57a1e8942729386}{get\-Taille} () const }\label{classPersonnage_ab12b6ad72071cad9d57a1e8942729386}
+
+\begin{DoxyCompactList}\small\item\em Getter sur la taille du personnage. \end{DoxyCompactList}\item 
+\hypertarget{classPersonnage_ad0b2a830e96dd2e5e5d0a7b26e90341b}{virtual sf\-::\-Vector2f \hyperlink{classPersonnage_ad0b2a830e96dd2e5e5d0a7b26e90341b}{get\-Position} () const }\label{classPersonnage_ad0b2a830e96dd2e5e5d0a7b26e90341b}
+
+\begin{DoxyCompactList}\small\item\em Getter sur la position du personnage. \end{DoxyCompactList}\item 
+\hypertarget{classPersonnage_a68dd2c8960a4dd659da0750ec134e76d}{virtual sf\-::\-Vector2f \hyperlink{classPersonnage_a68dd2c8960a4dd659da0750ec134e76d}{get\-Centre} () const }\label{classPersonnage_a68dd2c8960a4dd659da0750ec134e76d}
+
+\begin{DoxyCompactList}\small\item\em Getter sur le centre du personnage. \end{DoxyCompactList}\item 
+\hypertarget{classPersonnage_a72e0e76edaa68863f42bd1a2ca4e47e5}{virtual \hyperlink{Espace_8h_a7cf6e8c5a5bc5e7b2afef3647870b1c4}{Dir} \hyperlink{classPersonnage_a72e0e76edaa68863f42bd1a2ca4e47e5}{get\-Direction} () const }\label{classPersonnage_a72e0e76edaa68863f42bd1a2ca4e47e5}
+
+\begin{DoxyCompactList}\small\item\em Getter sur la direction courante. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classPersonnage_a74949b5474c36ebd0076981d158935fc}{set\-Dir} (\hyperlink{Espace_8h_a7cf6e8c5a5bc5e7b2afef3647870b1c4}{Dir} d)
+\begin{DoxyCompactList}\small\item\em Setter de la direction courante puis mise à jour de la sprite. \end{DoxyCompactList}\item 
+\hypertarget{classPersonnage_a07fb79f56c22d886a12441d2877033e9}{virtual int \hyperlink{classPersonnage_a07fb79f56c22d886a12441d2877033e9}{get\-Valeur\-Saut} ()}\label{classPersonnage_a07fb79f56c22d886a12441d2877033e9}
+
+\begin{DoxyCompactList}\small\item\em Getter de la valeur de saut. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classPersonnage_a8b340c7bb2fbe7bc89d5935ab1605cf6}{set\-Valeur\-Saut} (int val)
+\begin{DoxyCompactList}\small\item\em Setter de la valeur de saut. \end{DoxyCompactList}\item 
+\hypertarget{classPersonnage_ac71ef3ce2ce04f62edbf92dc66864a3e}{virtual void \hyperlink{classPersonnage_ac71ef3ce2ce04f62edbf92dc66864a3e}{incremente\-Cpt\-Pied} ()}\label{classPersonnage_ac71ef3ce2ce04f62edbf92dc66864a3e}
+
+\begin{DoxyCompactList}\small\item\em Incrémente le compteur de pied et met à jour la sprite si nécéssaire. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classPersonnage_a08cefca948cf0bc524af95d5657fa124}{set\-Position} (sf\-::\-Vector2f pos, \hyperlink{Espace_8h_a7cf6e8c5a5bc5e7b2afef3647870b1c4}{Dir} dir)
+\begin{DoxyCompactList}\small\item\em Change la position et la direction et met à jour la sprite. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classPersonnage_a0d32fe5b545abf8617dbe0448bf9505a}{set\-Etat\-Animation} (\hyperlink{classEtatAnimation}{Etat\-Animation} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Setter de l'état courant. \end{DoxyCompactList}\item 
+\hypertarget{classPersonnage_ab1d6128e535e6baed287f4b9f566d64d}{virtual \hyperlink{classEtatAnimation}{Etat\-Animation} $\ast$ \hyperlink{classPersonnage_ab1d6128e535e6baed287f4b9f566d64d}{get\-Etat\-Sol} ()}\label{classPersonnage_ab1d6128e535e6baed287f4b9f566d64d}
+
+\begin{DoxyCompactList}\small\item\em Getter de l'état sol. \end{DoxyCompactList}\item 
+\hypertarget{classPersonnage_aed0a5b70ded5b86d18318c0ddac44216}{virtual \hyperlink{classEtatAnimation}{Etat\-Animation} $\ast$ \hyperlink{classPersonnage_aed0a5b70ded5b86d18318c0ddac44216}{get\-Etat\-Air\-Intermediaire} ()}\label{classPersonnage_aed0a5b70ded5b86d18318c0ddac44216}
+
+\begin{DoxyCompactList}\small\item\em Getter de l'état air intermediaire. \end{DoxyCompactList}\item 
+\hypertarget{classPersonnage_a09fc1d95c50aacfb88f45cabbd3a719e}{virtual \hyperlink{classEtatAnimation}{Etat\-Animation} $\ast$ \hyperlink{classPersonnage_a09fc1d95c50aacfb88f45cabbd3a719e}{get\-Etat\-Air} ()}\label{classPersonnage_a09fc1d95c50aacfb88f45cabbd3a719e}
+
+\begin{DoxyCompactList}\small\item\em Getter de l'état air. \end{DoxyCompactList}\item 
+\hypertarget{classPersonnage_ae2a0469492e42000169ff5e026e4ac40}{virtual \hyperlink{classEtatAnimation}{Etat\-Animation} $\ast$ \hyperlink{classPersonnage_ae2a0469492e42000169ff5e026e4ac40}{get\-Etat\-Batiment} ()}\label{classPersonnage_ae2a0469492e42000169ff5e026e4ac40}
+
+\begin{DoxyCompactList}\small\item\em Getter de l'état batiment. \end{DoxyCompactList}\item 
+\hypertarget{classPersonnage_a50618688b71d5f1164f79f0a6ff28957}{virtual void \hyperlink{classPersonnage_a50618688b71d5f1164f79f0a6ff28957}{sauter} ()}\label{classPersonnage_a50618688b71d5f1164f79f0a6ff28957}
+
+\begin{DoxyCompactList}\small\item\em Appel sauter de l'état courant. \end{DoxyCompactList}\item 
+\hypertarget{classPersonnage_a9b599463cfe2c816baf6ecdc82683f1a}{virtual void \hyperlink{classPersonnage_a9b599463cfe2c816baf6ecdc82683f1a}{sauter\-Double} ()}\label{classPersonnage_a9b599463cfe2c816baf6ecdc82683f1a}
+
+\begin{DoxyCompactList}\small\item\em Appel sauter\-Double de l'état courant. \end{DoxyCompactList}\item 
+\hypertarget{classPersonnage_afc8c9dd1a0f301c5ef95a14f856ba39d}{virtual bool \hyperlink{classPersonnage_afc8c9dd1a0f301c5ef95a14f856ba39d}{entrer\-Batiment} ()}\label{classPersonnage_afc8c9dd1a0f301c5ef95a14f856ba39d}
+
+\begin{DoxyCompactList}\small\item\em Appel entrer\-Batiment de l'état courant. \end{DoxyCompactList}\item 
+\hypertarget{classPersonnage_aef98dc52138d88523945baa0bb81ee5a}{virtual bool \hyperlink{classPersonnage_aef98dc52138d88523945baa0bb81ee5a}{sortir\-Batiment} ()}\label{classPersonnage_aef98dc52138d88523945baa0bb81ee5a}
+
+\begin{DoxyCompactList}\small\item\em Appel sortir\-Batiment de l'état courant. \end{DoxyCompactList}\item 
+\hypertarget{classPersonnage_a4885a6cd17d50bf750232f7a4c94f64b}{virtual void \hyperlink{classPersonnage_a4885a6cd17d50bf750232f7a4c94f64b}{update} ()}\label{classPersonnage_a4885a6cd17d50bf750232f7a4c94f64b}
+
+\begin{DoxyCompactList}\small\item\em Appel update de l'état courant. \end{DoxyCompactList}\item 
+\hypertarget{classPersonnage_afa592d9bd88e741b06fad81471e76ecd}{virtual void \hyperlink{classPersonnage_afa592d9bd88e741b06fad81471e76ecd}{update\-Sprite} ()}\label{classPersonnage_afa592d9bd88e741b06fad81471e76ecd}
+
+\begin{DoxyCompactList}\small\item\em Appel update\-Sprite de l'état courant. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classPersonnage_a00ef4a38996c6c020ed3aa1e4d65098d}{move\-Sprite} (float x, float y)
+\begin{DoxyCompactList}\small\item\em Deplace la sprite. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classPersonnage_a99480aca193d012d344aceaf6742e7fe}{deplacer} (\hyperlink{Espace_8h_a7cf6e8c5a5bc5e7b2afef3647870b1c4}{Dir} dir, float value)
+\begin{DoxyCompactList}\small\item\em Anime le personnage puis le déplace. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classPersonnage_a8feaa72a18a1bc177d1c70c9a6c71cb3}{animer} (\hyperlink{Espace_8h_a7cf6e8c5a5bc5e7b2afef3647870b1c4}{Dir} dir)
+\begin{DoxyCompactList}\small\item\em Appel animer de l'état courant. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classPersonnage_a320cb07fb55be9eaeee82b6f39f231d8}{afficher} (sf\-::\-Render\-Window \&app) const 
+\begin{DoxyCompactList}\small\item\em Affiche le personnage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPersonnage_abec36eb0310adc71f3375297fc590c65}{\hyperlink{classPersonnage_abec36eb0310adc71f3375297fc590c65}{Personnage} ()}\label{classPersonnage_abec36eb0310adc71f3375297fc590c65}
+
+\begin{DoxyCompactList}\small\item\em Constructeur de \hyperlink{classPersonnage}{Personnage} servant uniquement pour les décorateurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\-::\-Sprite \hyperlink{classPersonnage_a2ead6ffe2f28cad6f35f22a411d057d6}{sprite\-\_\-}
+\item 
+std\-::vector$<$ sf\-::\-Texture $\ast$ $>$ \hyperlink{classPersonnage_a3a1d39c8f1d80a800cafc7fc34e5b578}{textures\-\_\-}
+\item 
+\hyperlink{Espace_8h_a7cf6e8c5a5bc5e7b2afef3647870b1c4}{Dir} \hyperlink{classPersonnage_aa125be5384227832c1289f23cd21e3b9}{dir\-\_\-}
+\item 
+sf\-::\-Vector2f \hyperlink{classPersonnage_ad9e9c1c2a9d317e9502f3ba5f8e5e7d9}{taille\-\_\-}
+\item 
+int \hyperlink{classPersonnage_a5a90b56d0e845fc46f670eb1451facbc}{valeur\-Saut\-\_\-}
+\item 
+int \hyperlink{classPersonnage_aa6e11d0b6c10c588c31b239e3fc7f7bf}{cpt\-Pied\-\_\-}
+\item 
+int \hyperlink{classPersonnage_a03257f632724ecf780c246ffd6d4b607}{cpt\-Max\-\_\-}
+\item 
+int \hyperlink{classPersonnage_aa9527d7da2c71782a3cc222cf54d2ef4}{vitesse\-\_\-}
+\item 
+\hyperlink{classEtatAnimation}{Etat\-Animation} $\ast$ \hyperlink{classPersonnage_adb14823c721de74a21f1d2cf81a21afe}{etat\-Sol\-\_\-}
+\item 
+\hyperlink{classEtatAnimation}{Etat\-Animation} $\ast$ \hyperlink{classPersonnage_a8009b989cc0b81a13e51cbe6c9a6aa57}{etat\-Air\-\_\-}
+\item 
+\hyperlink{classEtatAnimation}{Etat\-Animation} $\ast$ \hyperlink{classPersonnage_af8486012a3832c816fdd472ea12e5d7e}{etat\-Air\-Intermediaire\-\_\-}
+\item 
+\hyperlink{classEtatAnimation}{Etat\-Animation} $\ast$ \hyperlink{classPersonnage_a0fe6bd498f59727fc05660072f76692e}{etat\-Batiment\-\_\-}
+\item 
+\hyperlink{classEtatAnimation}{Etat\-Animation} $\ast$ \hyperlink{classPersonnage_ad5595cd1429d9530f1cd5bc91e9ce3f5}{etat\-Courant\-\_\-}
+\item 
+\hyperlink{classInventaire}{Inventaire} $\ast$ \hyperlink{classPersonnage_ae340ea617523029180a0556789f5e38d}{inventaire\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe représentant un personnage du jeu. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classPersonnage_a07c0b4b58965fe9c519978e2ddbb8e7f}{\index{Personnage@{Personnage}!Personnage@{Personnage}}
+\index{Personnage@{Personnage}!Personnage@{Personnage}}
+\subsubsection[{Personnage}]{\setlength{\rightskip}{0pt plus 5cm}Personnage\-::\-Personnage (
+\begin{DoxyParamCaption}
+\item[{{\bf Conteneur\-Personnage} $\ast$}]{p, }
+\item[{{\bf Dir}}]{d, }
+\item[{sf\-::\-Vector2f}]{taille, }
+\item[{std\-::vector$<$ sf\-::\-Texture $\ast$ $>$}]{textures}
+\end{DoxyParamCaption}
+)}}\label{classPersonnage_a07c0b4b58965fe9c519978e2ddbb8e7f}
+
+
+Constructeur de \hyperlink{classPersonnage}{Personnage}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Le Conteneur du \hyperlink{classPersonnage}{Personnage} \\
+\hline
+{\em d} & La direction courante \\
+\hline
+{\em taille} & La taille de l'image \\
+\hline
+{\em textures} & L'ensembles des textures du personnage \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classPersonnage_a320cb07fb55be9eaeee82b6f39f231d8}{\index{Personnage@{Personnage}!afficher@{afficher}}
+\index{afficher@{afficher}!Personnage@{Personnage}}
+\subsubsection[{afficher}]{\setlength{\rightskip}{0pt plus 5cm}void Personnage\-::afficher (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Render\-Window \&}]{app}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classPersonnage_a320cb07fb55be9eaeee82b6f39f231d8}
+
+
+Affiche le personnage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app} & La fenetre du jeu \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classDecorateurPersonnage_ae0a0f67b65ca9709974350c69c5b4739}{Decorateur\-Personnage}.
+
+\hypertarget{classPersonnage_a8feaa72a18a1bc177d1c70c9a6c71cb3}{\index{Personnage@{Personnage}!animer@{animer}}
+\index{animer@{animer}!Personnage@{Personnage}}
+\subsubsection[{animer}]{\setlength{\rightskip}{0pt plus 5cm}void Personnage\-::animer (
+\begin{DoxyParamCaption}
+\item[{{\bf Dir}}]{dir}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classPersonnage_a8feaa72a18a1bc177d1c70c9a6c71cb3}
+
+
+Appel animer de l'état courant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & La direction \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classDecorateurPersonnage_aa6603228e137ce603a4f8602fec0bb8b}{Decorateur\-Personnage}.
+
+\hypertarget{classPersonnage_a99480aca193d012d344aceaf6742e7fe}{\index{Personnage@{Personnage}!deplacer@{deplacer}}
+\index{deplacer@{deplacer}!Personnage@{Personnage}}
+\subsubsection[{deplacer}]{\setlength{\rightskip}{0pt plus 5cm}void Personnage\-::deplacer (
+\begin{DoxyParamCaption}
+\item[{{\bf Dir}}]{dir, }
+\item[{float}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classPersonnage_a99480aca193d012d344aceaf6742e7fe}
+
+
+Anime le personnage puis le déplace. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & La direction du mouvement \\
+\hline
+{\em value} & La valeur du dépacement \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classDecorateurPersonnage_ae672631729cf24d34aa3b21f52dc0629}{Decorateur\-Personnage}.
+
+\hypertarget{classPersonnage_ac2f4809fdfe2354f9e249dccd00fe4bc}{\index{Personnage@{Personnage}!essayer\-Ouvrir\-Batiment@{essayer\-Ouvrir\-Batiment}}
+\index{essayer\-Ouvrir\-Batiment@{essayer\-Ouvrir\-Batiment}!Personnage@{Personnage}}
+\subsubsection[{essayer\-Ouvrir\-Batiment}]{\setlength{\rightskip}{0pt plus 5cm}bool Personnage\-::essayer\-Ouvrir\-Batiment (
+\begin{DoxyParamCaption}
+\item[{{\bf Batiment\-Exterieur} $\ast$}]{bat}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classPersonnage_ac2f4809fdfe2354f9e249dccd00fe4bc}
+
+
+Renvoie vrai si on a ouvert le batiment (on a la bonne clé) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bat} & Le batiment que l'on essaie d'ouvrir \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classDecorateurPersonnage_a2ba5d156bbeb613ded71ae60b7e85c67}{Decorateur\-Personnage}.
+
+\hypertarget{classPersonnage_a00ef4a38996c6c020ed3aa1e4d65098d}{\index{Personnage@{Personnage}!move\-Sprite@{move\-Sprite}}
+\index{move\-Sprite@{move\-Sprite}!Personnage@{Personnage}}
+\subsubsection[{move\-Sprite}]{\setlength{\rightskip}{0pt plus 5cm}void Personnage\-::move\-Sprite (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classPersonnage_a00ef4a38996c6c020ed3aa1e4d65098d}
+
+
+Deplace la sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Le déplacement en largeur \\
+\hline
+{\em y} & Le déplacement en hauteur \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classDecorateurPersonnage_ab2374c1fac0a6885289157f4d21fbce8}{Decorateur\-Personnage}.
+
+\hypertarget{classPersonnage_a74949b5474c36ebd0076981d158935fc}{\index{Personnage@{Personnage}!set\-Dir@{set\-Dir}}
+\index{set\-Dir@{set\-Dir}!Personnage@{Personnage}}
+\subsubsection[{set\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}void Personnage\-::set\-Dir (
+\begin{DoxyParamCaption}
+\item[{{\bf Dir}}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classPersonnage_a74949b5474c36ebd0076981d158935fc}
+
+
+Setter de la direction courante puis mise à jour de la sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & La nouvelle direction \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classDecorateurPersonnage_ab1530f6bc3e289018a1bb4594d95e944}{Decorateur\-Personnage}.
+
+\hypertarget{classPersonnage_a0d32fe5b545abf8617dbe0448bf9505a}{\index{Personnage@{Personnage}!set\-Etat\-Animation@{set\-Etat\-Animation}}
+\index{set\-Etat\-Animation@{set\-Etat\-Animation}!Personnage@{Personnage}}
+\subsubsection[{set\-Etat\-Animation}]{\setlength{\rightskip}{0pt plus 5cm}void Personnage\-::set\-Etat\-Animation (
+\begin{DoxyParamCaption}
+\item[{{\bf Etat\-Animation} $\ast$}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classPersonnage_a0d32fe5b545abf8617dbe0448bf9505a}
+
+
+Setter de l'état courant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Le nouvel état \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classDecorateurPersonnage_a2b3f76b026571b3d1434e3af711c65ec}{Decorateur\-Personnage}.
+
+\hypertarget{classPersonnage_a08cefca948cf0bc524af95d5657fa124}{\index{Personnage@{Personnage}!set\-Position@{set\-Position}}
+\index{set\-Position@{set\-Position}!Personnage@{Personnage}}
+\subsubsection[{set\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Personnage\-::set\-Position (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Vector2f}]{pos, }
+\item[{{\bf Dir}}]{dir}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classPersonnage_a08cefca948cf0bc524af95d5657fa124}
+
+
+Change la position et la direction et met à jour la sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & La nouvelle position \\
+\hline
+{\em dir} & La nouvelle direction \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classDecorateurPersonnage_a85355d479f87bfd6907c39086eeb44c5}{Decorateur\-Personnage}.
+
+\hypertarget{classPersonnage_a8b340c7bb2fbe7bc89d5935ab1605cf6}{\index{Personnage@{Personnage}!set\-Valeur\-Saut@{set\-Valeur\-Saut}}
+\index{set\-Valeur\-Saut@{set\-Valeur\-Saut}!Personnage@{Personnage}}
+\subsubsection[{set\-Valeur\-Saut}]{\setlength{\rightskip}{0pt plus 5cm}void Personnage\-::set\-Valeur\-Saut (
+\begin{DoxyParamCaption}
+\item[{int}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classPersonnage_a8b340c7bb2fbe7bc89d5935ab1605cf6}
+
+
+Setter de la valeur de saut. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & La nouvelle valeur de saut \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classDecorateurPersonnage_a0570f794908b1b1426bdc4b5ca2b1223}{Decorateur\-Personnage}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classPersonnage_a03257f632724ecf780c246ffd6d4b607}{\index{Personnage@{Personnage}!cpt\-Max\-\_\-@{cpt\-Max\-\_\-}}
+\index{cpt\-Max\-\_\-@{cpt\-Max\-\_\-}!Personnage@{Personnage}}
+\subsubsection[{cpt\-Max\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Personnage\-::cpt\-Max\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classPersonnage_a03257f632724ecf780c246ffd6d4b607}
+Le compteur maximum de pied (tous les cpt\-Max\-\_\-, on change de pied) \hypertarget{classPersonnage_aa6e11d0b6c10c588c31b239e3fc7f7bf}{\index{Personnage@{Personnage}!cpt\-Pied\-\_\-@{cpt\-Pied\-\_\-}}
+\index{cpt\-Pied\-\_\-@{cpt\-Pied\-\_\-}!Personnage@{Personnage}}
+\subsubsection[{cpt\-Pied\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Personnage\-::cpt\-Pied\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classPersonnage_aa6e11d0b6c10c588c31b239e3fc7f7bf}
+Le compteur de pied \hypertarget{classPersonnage_aa125be5384227832c1289f23cd21e3b9}{\index{Personnage@{Personnage}!dir\-\_\-@{dir\-\_\-}}
+\index{dir\-\_\-@{dir\-\_\-}!Personnage@{Personnage}}
+\subsubsection[{dir\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dir} Personnage\-::dir\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classPersonnage_aa125be5384227832c1289f23cd21e3b9}
+La direction courante \hypertarget{classPersonnage_a8009b989cc0b81a13e51cbe6c9a6aa57}{\index{Personnage@{Personnage}!etat\-Air\-\_\-@{etat\-Air\-\_\-}}
+\index{etat\-Air\-\_\-@{etat\-Air\-\_\-}!Personnage@{Personnage}}
+\subsubsection[{etat\-Air\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Etat\-Animation}$\ast$ Personnage\-::etat\-Air\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classPersonnage_a8009b989cc0b81a13e51cbe6c9a6aa57}
+L'état air \hypertarget{classPersonnage_af8486012a3832c816fdd472ea12e5d7e}{\index{Personnage@{Personnage}!etat\-Air\-Intermediaire\-\_\-@{etat\-Air\-Intermediaire\-\_\-}}
+\index{etat\-Air\-Intermediaire\-\_\-@{etat\-Air\-Intermediaire\-\_\-}!Personnage@{Personnage}}
+\subsubsection[{etat\-Air\-Intermediaire\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Etat\-Animation}$\ast$ Personnage\-::etat\-Air\-Intermediaire\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classPersonnage_af8486012a3832c816fdd472ea12e5d7e}
+L'état air intermediaire \hypertarget{classPersonnage_a0fe6bd498f59727fc05660072f76692e}{\index{Personnage@{Personnage}!etat\-Batiment\-\_\-@{etat\-Batiment\-\_\-}}
+\index{etat\-Batiment\-\_\-@{etat\-Batiment\-\_\-}!Personnage@{Personnage}}
+\subsubsection[{etat\-Batiment\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Etat\-Animation}$\ast$ Personnage\-::etat\-Batiment\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classPersonnage_a0fe6bd498f59727fc05660072f76692e}
+L'état batiment \hypertarget{classPersonnage_ad5595cd1429d9530f1cd5bc91e9ce3f5}{\index{Personnage@{Personnage}!etat\-Courant\-\_\-@{etat\-Courant\-\_\-}}
+\index{etat\-Courant\-\_\-@{etat\-Courant\-\_\-}!Personnage@{Personnage}}
+\subsubsection[{etat\-Courant\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Etat\-Animation}$\ast$ Personnage\-::etat\-Courant\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classPersonnage_ad5595cd1429d9530f1cd5bc91e9ce3f5}
+L'état courant \hypertarget{classPersonnage_adb14823c721de74a21f1d2cf81a21afe}{\index{Personnage@{Personnage}!etat\-Sol\-\_\-@{etat\-Sol\-\_\-}}
+\index{etat\-Sol\-\_\-@{etat\-Sol\-\_\-}!Personnage@{Personnage}}
+\subsubsection[{etat\-Sol\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Etat\-Animation}$\ast$ Personnage\-::etat\-Sol\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classPersonnage_adb14823c721de74a21f1d2cf81a21afe}
+L'état sol \hypertarget{classPersonnage_ae340ea617523029180a0556789f5e38d}{\index{Personnage@{Personnage}!inventaire\-\_\-@{inventaire\-\_\-}}
+\index{inventaire\-\_\-@{inventaire\-\_\-}!Personnage@{Personnage}}
+\subsubsection[{inventaire\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Inventaire}$\ast$ Personnage\-::inventaire\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classPersonnage_ae340ea617523029180a0556789f5e38d}
+L'inventaire du personnage \hypertarget{classPersonnage_a2ead6ffe2f28cad6f35f22a411d057d6}{\index{Personnage@{Personnage}!sprite\-\_\-@{sprite\-\_\-}}
+\index{sprite\-\_\-@{sprite\-\_\-}!Personnage@{Personnage}}
+\subsubsection[{sprite\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Sprite Personnage\-::sprite\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classPersonnage_a2ead6ffe2f28cad6f35f22a411d057d6}
+La sprite (image) du personnage \hypertarget{classPersonnage_ad9e9c1c2a9d317e9502f3ba5f8e5e7d9}{\index{Personnage@{Personnage}!taille\-\_\-@{taille\-\_\-}}
+\index{taille\-\_\-@{taille\-\_\-}!Personnage@{Personnage}}
+\subsubsection[{taille\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Vector2f Personnage\-::taille\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classPersonnage_ad9e9c1c2a9d317e9502f3ba5f8e5e7d9}
+La taille du personnage \hypertarget{classPersonnage_a3a1d39c8f1d80a800cafc7fc34e5b578}{\index{Personnage@{Personnage}!textures\-\_\-@{textures\-\_\-}}
+\index{textures\-\_\-@{textures\-\_\-}!Personnage@{Personnage}}
+\subsubsection[{textures\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$sf\-::\-Texture$\ast$$>$ Personnage\-::textures\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classPersonnage_a3a1d39c8f1d80a800cafc7fc34e5b578}
+L'ensemble des textures du personnage \hypertarget{classPersonnage_a5a90b56d0e845fc46f670eb1451facbc}{\index{Personnage@{Personnage}!valeur\-Saut\-\_\-@{valeur\-Saut\-\_\-}}
+\index{valeur\-Saut\-\_\-@{valeur\-Saut\-\_\-}!Personnage@{Personnage}}
+\subsubsection[{valeur\-Saut\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Personnage\-::valeur\-Saut\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classPersonnage_a5a90b56d0e845fc46f670eb1451facbc}
+La valeur de saut du personnage \hypertarget{classPersonnage_aa9527d7da2c71782a3cc222cf54d2ef4}{\index{Personnage@{Personnage}!vitesse\-\_\-@{vitesse\-\_\-}}
+\index{vitesse\-\_\-@{vitesse\-\_\-}!Personnage@{Personnage}}
+\subsubsection[{vitesse\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Personnage\-::vitesse\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classPersonnage_aa9527d7da2c71782a3cc222cf54d2ef4}
+La vitesse du personnage 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Source/\-Personnage/\hyperlink{Personnage_8h}{Personnage.\-h}\item 
+Source/\-Personnage/\hyperlink{Personnage_8cpp}{Personnage.\-cpp}\end{DoxyCompactItemize}

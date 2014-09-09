@@ -1,0 +1,129 @@
+\hypertarget{classMurHorizontal}{\section{Mur\-Horizontal Class Reference}
+\label{classMurHorizontal}\index{Mur\-Horizontal@{Mur\-Horizontal}}
+}
+
+
+Classe héritant de \hyperlink{classMurAbstrait}{Mur\-Abstrait} représentant un mur horizontal.  
+
+
+
+
+{\ttfamily \#include $<$Mur\-Horizontal.\-h$>$}
+
+Inheritance diagram for Mur\-Horizontal\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMurHorizontal}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMurHorizontal_a04afad18c785afa55372ae5a75724819}{Mur\-Horizontal} (sf\-::\-Vector2f p, int longueur)
+\begin{DoxyCompactList}\small\item\em Constructeur de \hyperlink{classMurHorizontal}{Mur\-Horizontal} Crée un sous mur horizontal de la longueur passée en parametre. \end{DoxyCompactList}\item 
+\hypertarget{classMurHorizontal_afaaf65d3033a527556f70c20371fa303}{virtual \hyperlink{classMurHorizontal_afaaf65d3033a527556f70c20371fa303}{$\sim$\-Mur\-Horizontal} ()}\label{classMurHorizontal_afaaf65d3033a527556f70c20371fa303}
+
+\begin{DoxyCompactList}\small\item\em Destructeur de \hyperlink{classMurHorizontal}{Mur\-Horizontal}. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classMurHorizontal_a848a423ad763fbb5bc9103ac78187181}{is\-Horizontal} () const 
+\begin{DoxyCompactList}\small\item\em Renvoie que le mur est horizontal. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classMurHorizontal_a3549eac83fd0fe73ae47314fb88b81f4}{is\-Vertical} () const 
+\begin{DoxyCompactList}\small\item\em Renvoie que le mur n'est pas vertical. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classMurHorizontal_a59c0b82257b1f7d83397bde217c2636d}{add\-Door} (sf\-::\-Vector2f p1, sf\-::\-Vector2f p2)
+\begin{DoxyCompactList}\small\item\em Ajoute une porte Trouve le sous mur contenant les deux points passés en parametre puis le coupe en deux sous murs et ajoute la porte. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Classe héritant de \hyperlink{classMurAbstrait}{Mur\-Abstrait} représentant un mur horizontal. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMurHorizontal_a04afad18c785afa55372ae5a75724819}{\index{Mur\-Horizontal@{Mur\-Horizontal}!Mur\-Horizontal@{Mur\-Horizontal}}
+\index{Mur\-Horizontal@{Mur\-Horizontal}!MurHorizontal@{Mur\-Horizontal}}
+\subsubsection[{Mur\-Horizontal}]{\setlength{\rightskip}{0pt plus 5cm}Mur\-Horizontal\-::\-Mur\-Horizontal (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Vector2f}]{p, }
+\item[{int}]{longueur}
+\end{DoxyParamCaption}
+)}}\label{classMurHorizontal_a04afad18c785afa55372ae5a75724819}
+
+
+Constructeur de \hyperlink{classMurHorizontal}{Mur\-Horizontal} Crée un sous mur horizontal de la longueur passée en parametre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Le point en haut à gauche \\
+\hline
+{\em longueur} & La longueur du mur \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMurHorizontal_a59c0b82257b1f7d83397bde217c2636d}{\index{Mur\-Horizontal@{Mur\-Horizontal}!add\-Door@{add\-Door}}
+\index{add\-Door@{add\-Door}!MurHorizontal@{Mur\-Horizontal}}
+\subsubsection[{add\-Door}]{\setlength{\rightskip}{0pt plus 5cm}bool Mur\-Horizontal\-::add\-Door (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Vector2f}]{p1, }
+\item[{sf\-::\-Vector2f}]{p2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classMurHorizontal_a59c0b82257b1f7d83397bde217c2636d}
+
+
+Ajoute une porte Trouve le sous mur contenant les deux points passés en parametre puis le coupe en deux sous murs et ajoute la porte. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p1} & Le premier point de la porte \\
+\hline
+{\em p2} & Le second point de la porte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vrai si l'opération a réussie 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classMurAbstrait_a179d1afa63b9ba817ad2feaa6441672b}{Mur\-Abstrait}.
+
+\hypertarget{classMurHorizontal_a848a423ad763fbb5bc9103ac78187181}{\index{Mur\-Horizontal@{Mur\-Horizontal}!is\-Horizontal@{is\-Horizontal}}
+\index{is\-Horizontal@{is\-Horizontal}!MurHorizontal@{Mur\-Horizontal}}
+\subsubsection[{is\-Horizontal}]{\setlength{\rightskip}{0pt plus 5cm}bool Mur\-Horizontal\-::is\-Horizontal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classMurHorizontal_a848a423ad763fbb5bc9103ac78187181}
+
+
+Renvoie que le mur est horizontal. 
+
+\begin{DoxyReturn}{Returns}
+true 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classMurAbstrait_ac6d6c50b6d935bf6f322428c76c650bf}{Mur\-Abstrait}.
+
+\hypertarget{classMurHorizontal_a3549eac83fd0fe73ae47314fb88b81f4}{\index{Mur\-Horizontal@{Mur\-Horizontal}!is\-Vertical@{is\-Vertical}}
+\index{is\-Vertical@{is\-Vertical}!MurHorizontal@{Mur\-Horizontal}}
+\subsubsection[{is\-Vertical}]{\setlength{\rightskip}{0pt plus 5cm}bool Mur\-Horizontal\-::is\-Vertical (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classMurHorizontal_a3549eac83fd0fe73ae47314fb88b81f4}
+
+
+Renvoie que le mur n'est pas vertical. 
+
+\begin{DoxyReturn}{Returns}
+false 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classMurAbstrait_aeb0dc942a444fa8637839a715d49068a}{Mur\-Abstrait}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Source/\-Batiment/\-Interieur/\hyperlink{MurHorizontal_8h}{Mur\-Horizontal.\-h}\item 
+Source/\-Batiment/\-Interieur/\hyperlink{MurHorizontal_8cpp}{Mur\-Horizontal.\-cpp}\end{DoxyCompactItemize}

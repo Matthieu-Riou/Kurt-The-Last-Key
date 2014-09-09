@@ -1,0 +1,200 @@
+\hypertarget{classEtage}{\section{Etage Class Reference}
+\label{classEtage}\index{Etage@{Etage}}
+}
+
+
+Classe gérant un étage.  
+
+
+
+
+{\ttfamily \#include $<$Etage.\-h$>$}
+
+Inheritance diagram for Etage\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classEtage}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classEtage_a7a79b57ba18c2657e6a44d7737466217}{Etage} (int width, int prof, \hyperlink{classConteneurPersonnage}{Conteneur\-Personnage} $\ast$perso, \hyperlink{classMap}{Map} $\ast$map\-Parent)
+\begin{DoxyCompactList}\small\item\em Constructeur d'un étage, initialise les variables puis construit les murs et le sol. \end{DoxyCompactList}\item 
+\hypertarget{classEtage_a372b6a1b5b5f0ebf48e62b09352d239a}{virtual \hyperlink{classEtage_a372b6a1b5b5f0ebf48e62b09352d239a}{$\sim$\-Etage} ()}\label{classEtage_a372b6a1b5b5f0ebf48e62b09352d239a}
+
+\begin{DoxyCompactList}\small\item\em Destructeur de l'étage. \end{DoxyCompactList}\item 
+\hypertarget{classEtage_a167e0cb0115c2c17ed3f84c61655f21f}{virtual void \hyperlink{classEtage_a167e0cb0115c2c17ed3f84c61655f21f}{gestion\-Event} ()}\label{classEtage_a167e0cb0115c2c17ed3f84c61655f21f}
+
+\begin{DoxyCompactList}\small\item\em Permet de gérer les évènements (entrées clavier) si il s'agit de la map courante Si on il s'agit de la map courante, on teste les diférentes entrées clavier. \end{DoxyCompactList}\item 
+\hypertarget{classEtage_a0a7144190ad633923a0e312e24063386}{virtual void \hyperlink{classEtage_a0a7144190ad633923a0e312e24063386}{update} ()}\label{classEtage_a0a7144190ad633923a0e312e24063386}
+
+\begin{DoxyCompactList}\small\item\em Actualise l'étage en fonction des entrées clavier. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classEtage_aa758fb7cb5fc6ff2e8728807774f5df8}{deplacer} (\hyperlink{Espace_8h_a7cf6e8c5a5bc5e7b2afef3647870b1c4}{Dir} d)
+\begin{DoxyCompactList}\small\item\em Déplace le personnage en fonction de la direction choisie et teste si il est sur un objet pour le lui ajouter. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classEtage_aa1d74726de7b9db8322d5eaac59f36c4}{add\-Objet} (\hyperlink{classObjet}{Objet} $\ast$o)
+\begin{DoxyCompactList}\small\item\em Ajoute un objet à une position aléatoire dans l'étage. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classEtage_af1b2fb877236cdb018d04e4b7e7a05ca}{afficher} (sf\-::\-Render\-Window \&app) const 
+\begin{DoxyCompactList}\small\item\em Affiche l'étage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classEtage_ae6dae7353fd5e19e9a3e24ad28b3523e}{collision} (\hyperlink{Espace_8h_a7cf6e8c5a5bc5e7b2afef3647870b1c4}{Dir} d) const 
+\begin{DoxyCompactList}\small\item\em Permet de savoir si le personnage entre en collision avec un mur en se déplacant dans la direction d. \end{DoxyCompactList}\item 
+\hypertarget{classEtage_acc07b13f8ce22295b052d364e5b67281}{virtual void \hyperlink{classEtage_acc07b13f8ce22295b052d364e5b67281}{entrer} ()}\label{classEtage_acc07b13f8ce22295b052d364e5b67281}
+
+\begin{DoxyCompactList}\small\item\em Fonction appeler quand un personnage entre dans l'étage (place le personnage et gère la view) \end{DoxyCompactList}\item 
+\hypertarget{classEtage_a323ca8f266bfd556d304cdd1af04ceaf}{void \hyperlink{classEtage_a323ca8f266bfd556d304cdd1af04ceaf}{generer\-Etage} ()}\label{classEtage_a323ca8f266bfd556d304cdd1af04ceaf}
+
+\begin{DoxyCompactList}\small\item\em Place des murs dans l'étage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::vector$<$ \hyperlink{classMurAbstrait}{Mur\-Abstrait} $\ast$ $>$ \hyperlink{classEtage_a2e8c120a9956af256550bea2d0b4e1ec}{murs\-\_\-}
+\item 
+sf\-::\-Convex\-Shape $\ast$ \hyperlink{classEtage_a66b0fb3c8567a835d0f65585a3ca7ec3}{front\-Door\-\_\-}
+\item 
+int \hyperlink{classEtage_a5f820189aca5b74a16442b7262bb6ad5}{width\-\_\-}
+\item 
+int \hyperlink{classEtage_aede3188a63f55b1d17d9b2bf6a256976}{prof\-\_\-}
+\item 
+sf\-::\-Rectangle\-Shape \hyperlink{classEtage_abf98991bae9845f98d70ef6801108b6a}{sol}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Classe gérant un étage. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classEtage_a7a79b57ba18c2657e6a44d7737466217}{\index{Etage@{Etage}!Etage@{Etage}}
+\index{Etage@{Etage}!Etage@{Etage}}
+\subsubsection[{Etage}]{\setlength{\rightskip}{0pt plus 5cm}Etage\-::\-Etage (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{prof, }
+\item[{{\bf Conteneur\-Personnage} $\ast$}]{perso, }
+\item[{{\bf Map} $\ast$}]{map\-Parent}
+\end{DoxyParamCaption}
+)}}\label{classEtage_a7a79b57ba18c2657e6a44d7737466217}
+
+
+Constructeur d'un étage, initialise les variables puis construit les murs et le sol. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & La largeur \\
+\hline
+{\em prof} & La profondeur \\
+\hline
+{\em perso} & Le personnage qui est dans l'étage \\
+\hline
+{\em map\-Parent} & La map parent de l'étage \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classEtage_aa1d74726de7b9db8322d5eaac59f36c4}{\index{Etage@{Etage}!add\-Objet@{add\-Objet}}
+\index{add\-Objet@{add\-Objet}!Etage@{Etage}}
+\subsubsection[{add\-Objet}]{\setlength{\rightskip}{0pt plus 5cm}void Etage\-::add\-Objet (
+\begin{DoxyParamCaption}
+\item[{{\bf Objet} $\ast$}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classEtage_aa1d74726de7b9db8322d5eaac59f36c4}
+
+
+Ajoute un objet à une position aléatoire dans l'étage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & \hyperlink{classObjet}{Objet} que l'on veut ajouter \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classMap_aa915b4b184fd8e610f1406758d719eb3}{Map}.
+
+\hypertarget{classEtage_af1b2fb877236cdb018d04e4b7e7a05ca}{\index{Etage@{Etage}!afficher@{afficher}}
+\index{afficher@{afficher}!Etage@{Etage}}
+\subsubsection[{afficher}]{\setlength{\rightskip}{0pt plus 5cm}void Etage\-::afficher (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Render\-Window \&}]{app}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classEtage_af1b2fb877236cdb018d04e4b7e7a05ca}
+
+
+Affiche l'étage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app} & La fenetre du jeu \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classMap_a1485990ae9a46afcf7964a600d9a5386}{Map}.
+
+\hypertarget{classEtage_ae6dae7353fd5e19e9a3e24ad28b3523e}{\index{Etage@{Etage}!collision@{collision}}
+\index{collision@{collision}!Etage@{Etage}}
+\subsubsection[{collision}]{\setlength{\rightskip}{0pt plus 5cm}bool Etage\-::collision (
+\begin{DoxyParamCaption}
+\item[{{\bf Dir}}]{d}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classEtage_ae6dae7353fd5e19e9a3e24ad28b3523e}
+
+
+Permet de savoir si le personnage entre en collision avec un mur en se déplacant dans la direction d. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & La direction du déplacement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vrai si on entre en collision avec un mur en se déplacant vers d, faux sinon 
+\end{DoxyReturn}
+\hypertarget{classEtage_aa758fb7cb5fc6ff2e8728807774f5df8}{\index{Etage@{Etage}!deplacer@{deplacer}}
+\index{deplacer@{deplacer}!Etage@{Etage}}
+\subsubsection[{deplacer}]{\setlength{\rightskip}{0pt plus 5cm}void Etage\-::deplacer (
+\begin{DoxyParamCaption}
+\item[{{\bf Dir}}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classEtage_aa758fb7cb5fc6ff2e8728807774f5df8}
+
+
+Déplace le personnage en fonction de la direction choisie et teste si il est sur un objet pour le lui ajouter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & La direction voulue \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classMap_af3cf5fb88bc1fb355ed1465a8245769b}{Map}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classEtage_a66b0fb3c8567a835d0f65585a3ca7ec3}{\index{Etage@{Etage}!front\-Door\-\_\-@{front\-Door\-\_\-}}
+\index{front\-Door\-\_\-@{front\-Door\-\_\-}!Etage@{Etage}}
+\subsubsection[{front\-Door\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Convex\-Shape$\ast$ Etage\-::front\-Door\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classEtage_a66b0fb3c8567a835d0f65585a3ca7ec3}
+La porte d'entrée \hypertarget{classEtage_a2e8c120a9956af256550bea2d0b4e1ec}{\index{Etage@{Etage}!murs\-\_\-@{murs\-\_\-}}
+\index{murs\-\_\-@{murs\-\_\-}!Etage@{Etage}}
+\subsubsection[{murs\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf Mur\-Abstrait}$\ast$$>$ Etage\-::murs\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classEtage_a2e8c120a9956af256550bea2d0b4e1ec}
+Un tableau de murs \hypertarget{classEtage_aede3188a63f55b1d17d9b2bf6a256976}{\index{Etage@{Etage}!prof\-\_\-@{prof\-\_\-}}
+\index{prof\-\_\-@{prof\-\_\-}!Etage@{Etage}}
+\subsubsection[{prof\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Etage\-::prof\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classEtage_aede3188a63f55b1d17d9b2bf6a256976}
+La profondeur \hypertarget{classEtage_abf98991bae9845f98d70ef6801108b6a}{\index{Etage@{Etage}!sol@{sol}}
+\index{sol@{sol}!Etage@{Etage}}
+\subsubsection[{sol}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Rectangle\-Shape Etage\-::sol\hspace{0.3cm}{\ttfamily [private]}}}\label{classEtage_abf98991bae9845f98d70ef6801108b6a}
+Le sol de l'étage \hypertarget{classEtage_a5f820189aca5b74a16442b7262bb6ad5}{\index{Etage@{Etage}!width\-\_\-@{width\-\_\-}}
+\index{width\-\_\-@{width\-\_\-}!Etage@{Etage}}
+\subsubsection[{width\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}int Etage\-::width\-\_\-\hspace{0.3cm}{\ttfamily [private]}}}\label{classEtage_a5f820189aca5b74a16442b7262bb6ad5}
+La largeur 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Source/\-Batiment/\-Interieur/\hyperlink{Etage_8h}{Etage.\-h}\item 
+Source/\-Batiment/\-Interieur/\hyperlink{Batiment_2Interieur_2Etage_8cpp}{Etage.\-cpp}\end{DoxyCompactItemize}

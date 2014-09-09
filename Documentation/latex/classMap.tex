@@ -1,0 +1,150 @@
+\hypertarget{classMap}{\section{Map Class Reference}
+\label{classMap}\index{Map@{Map}}
+}
+
+
+Classe abstraite représentant le monde dans lequel vie Kurt (que ce soit l'extérieur ou l'intérieur des batiments)  
+
+
+
+
+{\ttfamily \#include $<$Map.\-h$>$}
+
+Inheritance diagram for Map\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMap}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMap_a3b787a14ea0702189fc7003669b7748d}{Map} (\hyperlink{classMap}{Map} $\ast$\hyperlink{classMap_a49f53be912ed1a0ad856bfaede835ca7}{map\-Courante\-\_\-}, \hyperlink{classConteneurPersonnage}{Conteneur\-Personnage} $\ast$perso, \hyperlink{classMap}{Map} $\ast$map\-Parent=N\-U\-L\-L)
+\begin{DoxyCompactList}\small\item\em Constructeur de \hyperlink{classMap}{Map} Initialise les différents attributs et fixe la view. \end{DoxyCompactList}\item 
+\hypertarget{classMap_aa403fbe09394ccf39747588f5168e3b2}{virtual \hyperlink{classMap_aa403fbe09394ccf39747588f5168e3b2}{$\sim$\-Map} ()}\label{classMap_aa403fbe09394ccf39747588f5168e3b2}
+
+\begin{DoxyCompactList}\small\item\em Destructeur de \hyperlink{classMap}{Map}. \end{DoxyCompactList}\item 
+\hypertarget{classMap_a8bdff7bdbdd14bd4add0d282f51f35e0}{virtual void \hyperlink{classMap_a8bdff7bdbdd14bd4add0d282f51f35e0}{entrer} ()}\label{classMap_a8bdff7bdbdd14bd4add0d282f51f35e0}
+
+\begin{DoxyCompactList}\small\item\em Fonction appelée lorsque l'on arrive sur la map (ne fait rien par défaut) \end{DoxyCompactList}\item 
+\hypertarget{classMap_a483d996c2d56cf7af870bde2a63423dc}{virtual void \hyperlink{classMap_a483d996c2d56cf7af870bde2a63423dc}{sortir} ()}\label{classMap_a483d996c2d56cf7af870bde2a63423dc}
+
+\begin{DoxyCompactList}\small\item\em Fonction appelée lorsque l'on sort d'un batiment. \end{DoxyCompactList}\item 
+\hypertarget{classMap_aa915b4b184fd8e610f1406758d719eb3}{virtual void \hyperlink{classMap_aa915b4b184fd8e610f1406758d719eb3}{add\-Objet} (\hyperlink{classObjet}{Objet} $\ast$o)=0}\label{classMap_aa915b4b184fd8e610f1406758d719eb3}
+
+\begin{DoxyCompactList}\small\item\em Ajoute un objet dans la map. \end{DoxyCompactList}\item 
+\hypertarget{classMap_ac234d1a2a4019dbc386ef23c22458b06}{virtual void \hyperlink{classMap_ac234d1a2a4019dbc386ef23c22458b06}{gestion\-Event} ()=0}\label{classMap_ac234d1a2a4019dbc386ef23c22458b06}
+
+\begin{DoxyCompactList}\small\item\em Gère les évènements dans la map. \end{DoxyCompactList}\item 
+\hypertarget{classMap_a2adb80b180133a92000b46c0f7914f04}{virtual void \hyperlink{classMap_a2adb80b180133a92000b46c0f7914f04}{update} ()=0}\label{classMap_a2adb80b180133a92000b46c0f7914f04}
+
+\begin{DoxyCompactList}\small\item\em Met à jour la map. \end{DoxyCompactList}\item 
+\hypertarget{classMap_af3cf5fb88bc1fb355ed1465a8245769b}{virtual void \hyperlink{classMap_af3cf5fb88bc1fb355ed1465a8245769b}{deplacer} (\hyperlink{Espace_8h_a7cf6e8c5a5bc5e7b2afef3647870b1c4}{Dir} d)=0}\label{classMap_af3cf5fb88bc1fb355ed1465a8245769b}
+
+\begin{DoxyCompactList}\small\item\em Déplace la map. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classMap_a1485990ae9a46afcf7964a600d9a5386}{afficher} (sf\-::\-Render\-Window \&app) const 
+\begin{DoxyCompactList}\small\item\em Affiche la map dans la fenetre. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMap_a22a0a82bda61dea736d40fd58b905903}{virtual void \hyperlink{classMap_a22a0a82bda61dea736d40fd58b905903}{test\-Ramasser\-Objet} ()}\label{classMap_a22a0a82bda61dea736d40fd58b905903}
+
+\begin{DoxyCompactList}\small\item\em Parcours tous les objets contenus dans la map pour trouver ceux qui sont à la même position que le personnage et les lui ajouter (puis les supprimer de la map) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMap}{Map} $\ast$ \hyperlink{classMap_a49f53be912ed1a0ad856bfaede835ca7}{map\-Courante\-\_\-}
+\item 
+\hyperlink{classMap}{Map} $\ast$ \hyperlink{classMap_a06607d6259888e4d1ae578b618e95d51}{map\-Parent\-\_\-}
+\item 
+\hyperlink{classConteneurPersonnage}{Conteneur\-Personnage} $\ast$ \hyperlink{classMap_a44af293f84353a80032d1d9499de1705}{Kurt}
+\item 
+sf\-::\-Vector2f \hyperlink{classMap_a186e58887b77964c59209512d82b49d8}{pos\-Kurt}
+\item 
+\hyperlink{Espace_8h_a7cf6e8c5a5bc5e7b2afef3647870b1c4}{Dir} \hyperlink{classMap_ae3024f314f0e6ba49349d78c43c31c30}{dir\-Kurt}
+\item 
+sf\-::\-View \hyperlink{classMap_af8e91c6748c37dddbf1f6375019e4e65}{view\-Map\-\_\-}
+\item 
+std\-::vector$<$ \hyperlink{classObjet}{Objet} $\ast$ $>$ \hyperlink{classMap_a2284767a0c9c3917a894d672589e2e20}{objet\-\_\-}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe abstraite représentant le monde dans lequel vie Kurt (que ce soit l'extérieur ou l'intérieur des batiments) 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMap_a3b787a14ea0702189fc7003669b7748d}{\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\subsubsection[{Map}]{\setlength{\rightskip}{0pt plus 5cm}Map\-::\-Map (
+\begin{DoxyParamCaption}
+\item[{{\bf Map} $\ast$}]{map\-Courante, }
+\item[{{\bf Conteneur\-Personnage} $\ast$}]{perso, }
+\item[{{\bf Map} $\ast$}]{map\-Parent = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)}}\label{classMap_a3b787a14ea0702189fc7003669b7748d}
+
+
+Constructeur de \hyperlink{classMap}{Map} Initialise les différents attributs et fixe la view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map\-Courante} & La map courante \\
+\hline
+{\em perso} & Le personnage du joueur \\
+\hline
+{\em map\-Parent} & La map parente (de laquelle on vient) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMap_a1485990ae9a46afcf7964a600d9a5386}{\index{Map@{Map}!afficher@{afficher}}
+\index{afficher@{afficher}!Map@{Map}}
+\subsubsection[{afficher}]{\setlength{\rightskip}{0pt plus 5cm}void Map\-::afficher (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Render\-Window \&}]{app}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classMap_a1485990ae9a46afcf7964a600d9a5386}
+
+
+Affiche la map dans la fenetre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app} & La fenetre du jeu \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classExterieur_ac06a6939f2998926160d4ccf11cc8498}{Exterieur}, and \hyperlink{classEtage_af1b2fb877236cdb018d04e4b7e7a05ca}{Etage}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classMap_ae3024f314f0e6ba49349d78c43c31c30}{\index{Map@{Map}!dir\-Kurt@{dir\-Kurt}}
+\index{dir\-Kurt@{dir\-Kurt}!Map@{Map}}
+\subsubsection[{dir\-Kurt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dir} Map\-::dir\-Kurt\hspace{0.3cm}{\ttfamily [protected]}}}\label{classMap_ae3024f314f0e6ba49349d78c43c31c30}
+la direction dans laquelle va Kurt \hypertarget{classMap_a44af293f84353a80032d1d9499de1705}{\index{Map@{Map}!Kurt@{Kurt}}
+\index{Kurt@{Kurt}!Map@{Map}}
+\subsubsection[{Kurt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Conteneur\-Personnage}$\ast$ Map\-::\-Kurt\hspace{0.3cm}{\ttfamily [protected]}}}\label{classMap_a44af293f84353a80032d1d9499de1705}
+Le personnage du joueur \hypertarget{classMap_a49f53be912ed1a0ad856bfaede835ca7}{\index{Map@{Map}!map\-Courante\-\_\-@{map\-Courante\-\_\-}}
+\index{map\-Courante\-\_\-@{map\-Courante\-\_\-}!Map@{Map}}
+\subsubsection[{map\-Courante\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Map}$\ast$ Map\-::map\-Courante\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classMap_a49f53be912ed1a0ad856bfaede835ca7}
+\hyperlink{classMap}{Map} courante ( que l'on doit afficher ) \hypertarget{classMap_a06607d6259888e4d1ae578b618e95d51}{\index{Map@{Map}!map\-Parent\-\_\-@{map\-Parent\-\_\-}}
+\index{map\-Parent\-\_\-@{map\-Parent\-\_\-}!Map@{Map}}
+\subsubsection[{map\-Parent\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Map}$\ast$ Map\-::map\-Parent\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classMap_a06607d6259888e4d1ae578b618e95d51}
+\hyperlink{classMap}{Map} de laquelle on vient \hypertarget{classMap_a2284767a0c9c3917a894d672589e2e20}{\index{Map@{Map}!objet\-\_\-@{objet\-\_\-}}
+\index{objet\-\_\-@{objet\-\_\-}!Map@{Map}}
+\subsubsection[{objet\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf Objet}$\ast$$>$ Map\-::objet\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classMap_a2284767a0c9c3917a894d672589e2e20}
+Un ensemble d'objets déposés dans la map(que le personnage peut récupérer \hypertarget{classMap_a186e58887b77964c59209512d82b49d8}{\index{Map@{Map}!pos\-Kurt@{pos\-Kurt}}
+\index{pos\-Kurt@{pos\-Kurt}!Map@{Map}}
+\subsubsection[{pos\-Kurt}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Vector2f Map\-::pos\-Kurt\hspace{0.3cm}{\ttfamily [protected]}}}\label{classMap_a186e58887b77964c59209512d82b49d8}
+La position (x,y) du personnage dans la map \hypertarget{classMap_af8e91c6748c37dddbf1f6375019e4e65}{\index{Map@{Map}!view\-Map\-\_\-@{view\-Map\-\_\-}}
+\index{view\-Map\-\_\-@{view\-Map\-\_\-}!Map@{Map}}
+\subsubsection[{view\-Map\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-View Map\-::view\-Map\-\_\-\hspace{0.3cm}{\ttfamily [protected]}}}\label{classMap_af8e91c6748c37dddbf1f6375019e4e65}
+La view dans laquelle on affiche la map 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Source/\-Map/\hyperlink{Map_8h}{Map.\-h}\item 
+Source/\-Map/\hyperlink{Map_8cpp}{Map.\-cpp}\end{DoxyCompactItemize}
