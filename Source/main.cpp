@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include "Gestionnaire.h"
+#include "Menu/Intro.h"
 
 /*! \file main.cpp
 	\brief La fonction appelée au démarrage
@@ -14,9 +15,12 @@ int main()
 {
     sf::RenderWindow window(sf::VideoMode(800, 600), "Kurt : The Last Key");
 
+
 	Gestionnaire gestionnaire;
 
 	window.setFramerateLimit(60);
+
+	intro(window);
 
     // on fait tourner le programme jusqu'à ce que la fenêtre soit fermée
     while (window.isOpen())
