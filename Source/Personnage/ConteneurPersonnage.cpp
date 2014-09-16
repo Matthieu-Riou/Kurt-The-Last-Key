@@ -1,7 +1,7 @@
 #include "ConteneurPersonnage.h"
 #include "Personnage.h"
-#include "BonusVitesse.h"
-#include "DoubleSaut.h"
+#include "Decorateur/BonusVitesse.h"
+#include "Decorateur/DoubleSaut.h"
 #include "Hero.h"
 #include <iostream>
 

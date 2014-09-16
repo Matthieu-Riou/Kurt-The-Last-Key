@@ -7,7 +7,7 @@
 */
 
 #include <memory>
-#include "Personnage.h"
+#include "../Personnage.h"
 
 /** \class DecorateurPersonnage
 	\brief Classe héritant de Personnage (pour le type), contenant un Personnage (pattern Decorator)
