@@ -20,7 +20,8 @@ int main()
 
 	window.setFramerateLimit(60);
 
-	intro(window);
+	Intro intro;
+	intro.run(window);
 
     // on fait tourner le programme jusqu'à ce que la fenêtre soit fermée
     while (window.isOpen())
