@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "../Aleatoire.h"
+#include "../Propriete/Propriete.h"
 #include "../Map/Exterieur.h"
 
 void intro(sf::RenderWindow &app);

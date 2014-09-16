@@ -24,6 +24,42 @@ void intro(sf::RenderWindow &app)
 	sf::FloatRect rect = texte_.getLocalBounds();
 	texte_.setPosition(sf::Vector2f((Propriete::Fenetre::fenX() - rect.width) / 2, (Propriete::Fenetre::fenY() - Propriete::Fenetre::hauteurSol() - rect.height/2)));
 
+	std::vector<sf::RectangleShape> fen_;	/*!< Ensemble de toutes les fenetres */
+
+	unsigned int etage_ = 5; 			/*!< Nombre d'étages */
+	unsigned int nbFenLargeur_ = 3;		/*!< Nembre de fenetres */
+	float posX = 600.;
+
+	sf::Vector2f tailleFen_ = Propriete::BatimentExterieur::tailleFenetre();		/*!< Taille d'une fenetre */
+	sf::Vector2f espaceFen_ = Propriete::BatimentExterieur::espaceFenetre();		/*!< Espace entre 2 fenetres */
+	sf::Vector2f taillePorte_ = Propriete::BatimentExterieur::taillePorte();		/*!< Taille de la porte */
+	sf::Vector2f taille_(nbFenLargeur_*(tailleFen_.x + espaceFen_.x) + espaceFen_.x, (etage_)*(tailleFen_.y + espaceFen_.y) + taillePorte_.y + espaceFen_.y);			/*!< Taille du batiment */
+
+	sf::RectangleShape mur_(taille_);		/*!< Le rectangle représentant le mur */
+	sf::RectangleShape porte_(taillePorte_); 		/*!< Le rectangle représentant la porte */
+
+	mur_.move(posX, Propriete::Fenetre::hauteurSol() - taille_.y);
+	mur_.setFillColor(Propriete::BatimentExterieur::colorMur());
+	mur_.setOutlineThickness(1);
+	mur_.setOutlineColor(sf::Color::Black);
+	
+
+	porte_.move((posX + taille_.x/2 - taillePorte_.x/2),  Propriete::Fenetre::hauteurSol() - taillePorte_.y);
+	porte_.setFillColor(Propriete::BatimentExterieur::colorPorteOuverte());
+	porte_.setOutlineThickness(1);
+	porte_.setOutlineColor(sf::Color::Black);
+	
+	for(unsigned int i = 0; i < etage_; i++)
+	{
+		for(unsigned int j = 0; j < nbFenLargeur_; j++)
+		{
+			fen_.push_back(sf::RectangleShape(tailleFen_));
+			fen_.back().move(posX + espaceFen_.x + j*(tailleFen_.x + espaceFen_.x), Propriete::Fenetre::hauteurSol() - taillePorte_.y -((tailleFen_.y + espaceFen_.x)*(i+1)));
+			fen_.back().setFillColor(Propriete::BatimentExterieur::colorFenetre());
+			fen_.back().setOutlineThickness(1);
+			fen_.back().setOutlineColor(sf::Color::Black);
+		}
+	}
 
 	while(!(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)))
 	{
@@ -55,6 +91,15 @@ void intro(sf::RenderWindow &app)
 
 		for(std::list<Decor*>::const_iterator it = decor_.begin(); it != decor_.end(); ++it)
 			(*it)->afficher(app);
+
+
+		app.draw(mur_);
+		app.draw(porte_);
+	
+		for(unsigned int i = 0; i < fen_.size(); i++)
+	    {
+    		app.draw(fen_[i]);
+		}
 
 		app.draw(texte_);
 
