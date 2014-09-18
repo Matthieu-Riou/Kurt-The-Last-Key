@@ -36,7 +36,8 @@ ConteneurPersonnage::ConteneurPersonnage(Personnage* p) : perso_(p)
 */
 void ConteneurPersonnage::creerHero()
 {
-	perso_ = std::shared_ptr<Personnage>(new Hero(new EtatSol(this), new EtatEnAir(this), new EtatEnAirIntermediaire(this), new EtatBatiment(this), new Inventaire(this)));
+	if(perso_ == nullptr)
+		perso_ = std::shared_ptr<Personnage>(new Hero(new EtatSol(this), new EtatEnAir(this), new EtatEnAirIntermediaire(this), new EtatBatiment(this), new Inventaire(this)));
 }
 
 /** \brief Decore le personnage avec un bonus de vitesse
