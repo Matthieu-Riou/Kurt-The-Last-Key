@@ -10,7 +10,6 @@
 
 class Personnage;
 
-
 /** \class ConteneurPersonnage
 	\brief La classe encapsulant Personnage
 */

@@ -23,7 +23,19 @@ Personnage::Personnage() : etatSol_(0), etatAir_(0),etatAirIntermediaire_(0), et
 	\param taille La taille de l'image
 	\param textures L'ensembles des textures du personnage
 */
-Personnage::Personnage(ConteneurPersonnage* p, Dir d ,sf::Vector2f taille, std::vector<sf::Texture*> textures) : textures_(textures), dir_(d), taille_(taille), valeurSaut_(0), cptPied_(0), cptMax_(10),vitesse_(Propriete::Hero::vitesse()), etatSol_(new EtatSol(p)), etatAir_(new EtatEnAir(p)),etatAirIntermediaire_( new EtatEnAirIntermediaire(p)), etatBatiment_(new EtatBatiment(p)), etatCourant_(etatSol_), inventaire_(new Inventaire(p))
+Personnage::Personnage(Dir d ,sf::Vector2f taille, std::vector<sf::Texture*> textures, EtatAnimation* etatSol, EtatAnimation* etatAir, EtatAnimation* etatAirIntermediaire, EtatAnimation* etatBatiment, Inventaire* inventaire) : 
+				textures_(textures), 
+				dir_(d), taille_(taille), 
+				valeurSaut_(0), 
+				cptPied_(0), 
+				cptMax_(10),
+				vitesse_(Propriete::Hero::vitesse()), 
+				etatSol_(etatSol), 
+				etatAir_(etatAir),
+				etatAirIntermediaire_(etatAirIntermediaire), 
+				etatBatiment_(etatBatiment), 
+				etatCourant_(etatSol_), 
+				inventaire_(inventaire)
 {
 	updateSprite();
 }

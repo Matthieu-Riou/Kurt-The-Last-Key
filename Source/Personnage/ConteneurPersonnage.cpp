@@ -5,6 +5,13 @@
 #include "Hero.h"
 #include <iostream>
 
+#include "../Objet/Objet.h"
+#include "GestionAnimation/EtatAnimation.h"
+#include "GestionAnimation/EtatSol.h"
+#include "GestionAnimation/EtatEnAir.h"
+#include "GestionAnimation/EtatEnAirIntermediaire.h"
+#include "GestionAnimation/EtatBatiment.h"
+
 
 /** \file ConteneurPersonnage.cpp
 	\brief Encapsule Personnage pour permettre au décorateur d'être pris en compte dans tout le programme
@@ -29,7 +36,7 @@ ConteneurPersonnage::ConteneurPersonnage(Personnage* p) : perso_(p)
 */
 void ConteneurPersonnage::creerHero()
 {
-	perso_ = std::shared_ptr<Personnage>(new Hero(this));
+	perso_ = std::shared_ptr<Personnage>(new Hero(new EtatSol(this), new EtatEnAir(this), new EtatEnAirIntermediaire(this), new EtatBatiment(this), new Inventaire(this)));
 }
 
 /** \brief Decore le personnage avec un bonus de vitesse

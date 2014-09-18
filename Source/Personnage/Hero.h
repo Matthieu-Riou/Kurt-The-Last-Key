@@ -14,7 +14,7 @@
 class Hero : public Personnage
 {
 	public :
-		Hero(ConteneurPersonnage* p);
+		Hero(EtatAnimation* etatSol, EtatAnimation* etatAir, EtatAnimation* etatAirIntermediaire, EtatAnimation* etatBatiment, Inventaire* inventaire);
 };
 
 #endif

@@ -54,7 +54,7 @@ class Personnage
         Inventaire* inventaire_;					/*!< L'inventaire du personnage */
         
     public:
-        Personnage(ConteneurPersonnage* p, Dir d ,sf::Vector2f taille, std::vector<sf::Texture*> textures);
+        Personnage(Dir d ,sf::Vector2f taille, std::vector<sf::Texture*> textures, EtatAnimation* etatSol, EtatAnimation* etatAir, EtatAnimation* etatAirIntermediaire, EtatAnimation* etatBatiment, Inventaire* inventaire);
         virtual ~Personnage();
 
         virtual bool essayerOuvrirBatiment(BatimentExterieur *bat);

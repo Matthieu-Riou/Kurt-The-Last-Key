@@ -6,7 +6,8 @@
 */
 
 /** \brief Constructeur de Hero en utilisant les parametres de Propriete::Hero */
-Hero::Hero(ConteneurPersonnage* p): Personnage(p, DROITE, Propriete::Hero::taille(), Propriete::Hero::textures())
+Hero::Hero(EtatAnimation* etatSol, EtatAnimation* etatAir, EtatAnimation* etatAirIntermediaire, EtatAnimation* etatBatiment, Inventaire* inventaire) : 
+			Personnage(DROITE, Propriete::Hero::taille(), Propriete::Hero::textures(), etatSol, etatAir, etatAirIntermediaire, etatBatiment, inventaire)
 {
     sprite_.move(200, Propriete::Fenetre::hauteurSol()-taille_.y);
 }
