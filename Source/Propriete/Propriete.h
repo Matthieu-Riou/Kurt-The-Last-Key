@@ -120,10 +120,11 @@ namespace Propriete
 	class Hero
 	{
 		private:
-			sf::Vector2f taille_;					/*!< Taille de l'image représentant le héro */
-			std::vector<sf::Texture*> textures_;	/*!< Ensemble des textures du héro */
-			int valeurSaut_;						/*!< Valeur d'un saut */
-			float vitesse_;							/*!< Vitesse par défaut d'un héro */
+			sf::Vector2f taille_;						/*!< Taille de l'image représentant le héro */
+			std::vector<sf::Texture*> textures_;		/*!< Ensemble des textures du héro */
+			std::vector<sf::Texture*> texturesRouges_;	/*!< Ensemble des textures rouges du héro */
+			int valeurSaut_;							/*!< Valeur d'un saut */
+			float vitesse_;								/*!< Vitesse par défaut d'un héro */
 			
 			Hero();
 			~Hero();
@@ -136,6 +137,7 @@ namespace Propriete
 			
 			static sf::Vector2f taille();
 			static std::vector<sf::Texture*> textures();
+			static std::vector<sf::Texture*> texturesRouges();
 			static int valeurSaut();
 			static float vitesse();
 			
@@ -187,6 +189,7 @@ namespace Propriete
 			sf::Vector2f taille_;			/*!< Taille des objets */
 			sf::Texture etoileJaune_;		/*!< Texture de l'étoile jaune*/
 			sf::Texture etoileBleue_;		/*!< Texture de l'étoile bleue*/
+			sf::Texture etoileVerte_;		/*!< Texture de l'étoile verte*/
 			sf::Texture cle_;				/*!< Texture de la cle */
 			
 			Objet();
@@ -199,6 +202,7 @@ namespace Propriete
 			static sf::Vector2f taille();
 			static sf::Texture* etoileJaune();
 			static sf::Texture* etoileBleue();
+			static sf::Texture* etoileVerte();
 			static sf::Texture* cle();
 			
 			

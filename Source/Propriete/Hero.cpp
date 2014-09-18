@@ -13,6 +13,7 @@ Propriete::Hero* Propriete::Hero::instance_ = NULL;		//Initialisation de l'insta
 Propriete::Hero::Hero() : 
 			taille_(sf::Vector2f(33.,34.)), 
 			textures_(std::vector<sf::Texture*>(16)), 
+			texturesRouges_(std::vector<sf::Texture*>(16)),
 			valeurSaut_(25), 
 			vitesse_(2.)
 {	
@@ -55,6 +56,48 @@ Propriete::Hero::Hero() :
     {
     	std::cerr<< "Impossible de charger une texture de la classe Hero." << std::endl;
     }
+
+	
+	// De même pour les textures 
+	
+	texturesRouges_[GAUCHE*4] = new sf::Texture();
+	texturesRouges_[GAUCHE*4 + 1] = new sf::Texture();
+	texturesRouges_[GAUCHE*4 + 2] = texturesRouges_[GAUCHE*4];
+	texturesRouges_[GAUCHE*4 + 3] = new sf::Texture();
+	
+	texturesRouges_[DROITE*4] = new sf::Texture();
+	texturesRouges_[DROITE*4 + 1] = new sf::Texture();
+	texturesRouges_[DROITE*4 + 2] = texturesRouges_[DROITE*4];
+	texturesRouges_[DROITE*4 + 3] = new sf::Texture();
+	
+	texturesRouges_[HAUT*4] = new sf::Texture();
+	texturesRouges_[HAUT*4 + 1] = new sf::Texture();
+	texturesRouges_[HAUT*4 + 2] = texturesRouges_[HAUT*4];
+	texturesRouges_[HAUT*4 + 3] = new sf::Texture();
+
+	
+	texturesRouges_[BAS*4] = new sf::Texture();
+	texturesRouges_[BAS*4 + 1] = new sf::Texture();
+	texturesRouges_[BAS*4 + 2] = texturesRouges_[BAS*4];
+	texturesRouges_[BAS*4 + 3] = new sf::Texture();
+	
+	// On charge les images
+	if ( !texturesRouges_[GAUCHE*4]->loadFromFile("Image/Rouge/Kurt_Gauche0.png") ||
+            !texturesRouges_[GAUCHE*4 + 1]->loadFromFile("Image/Rouge/Kurt_Gauche1.png") ||
+            !texturesRouges_[GAUCHE*4 + 3]->loadFromFile("Image/Rouge/Kurt_Gauche2.png") ||
+            !texturesRouges_[DROITE*4]->loadFromFile("Image/Rouge/Kurt_Droite0.png") ||
+            !texturesRouges_[DROITE*4+1]->loadFromFile("Image/Rouge/Kurt_Droite1.png") ||
+            !texturesRouges_[DROITE*4+3]->loadFromFile("Image/Rouge/Kurt_Droite2.png") ||
+            !texturesRouges_[HAUT*4]->loadFromFile("Image/Rouge/Kurt_Haut0.png") ||
+            !texturesRouges_[HAUT*4+1]->loadFromFile("Image/Rouge/Kurt_Haut1.png") ||
+            !texturesRouges_[HAUT*4+3]->loadFromFile("Image/Rouge/Kurt_Haut2.png") ||
+            !texturesRouges_[BAS*4]->loadFromFile("Image/Rouge/Kurt_Bas0.png") ||
+            !texturesRouges_[BAS*4+1]->loadFromFile("Image/Rouge/Kurt_Bas1.png") ||
+            !texturesRouges_[BAS*4+3]->loadFromFile("Image/Rouge/Kurt_Bas2.png"))
+    {
+    	std::cerr<< "Impossible de charger une texture de la classe Hero." << std::endl;
+    }
+
 }
 
 /** \brief Destructeur de Hero (détruit les textures) */
@@ -62,6 +105,11 @@ Propriete::Hero::~Hero(){
 	for (unsigned int i=0; i<textures_.size(); i++){
 		if (i%4 != 2)
 			delete textures_[i];
+	}
+
+	for (unsigned int i=0; i<texturesRouges_.size(); i++){
+		if (i%4 != 2)
+			delete texturesRouges_[i];
 	}
 }
 
@@ -91,6 +139,12 @@ sf::Vector2f Propriete::Hero::taille(){
 */
 std::vector<sf::Texture*> Propriete::Hero::textures(){
 	return instance_->textures_;
+}
+
+/** \brief Getter sur le tableau de textures rouges
+*/
+std::vector<sf::Texture*> Propriete::Hero::texturesRouges(){
+	return instance_->texturesRouges_;
 }
 
 /** \brief Getter sur la valeur de saut
