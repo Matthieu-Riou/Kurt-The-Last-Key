@@ -127,3 +127,11 @@ void DecorateurPersonnage::animer(Dir dir){
 void DecorateurPersonnage::afficher(sf::RenderWindow &app) const{
 	perso_->afficher(app);
 }
+
+
+
+
+void DecorateurPersonnage::setTexture(std::vector<sf::Texture*> textures)
+{
+	perso_->setTexture(textures);
+}

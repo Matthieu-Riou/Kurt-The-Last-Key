@@ -23,6 +23,7 @@
 #include "../Objet/Objet.h"
 #include "../Objet/EtoileVitesse.h"
 #include "../Objet/EtoileSaut.h"
+#include "../Objet/EtoileCouleur.h"
 
 /** \class Exterieur
 	\brief Classe héritant de Map représentant le monde extérieur (extérieur des batiments)

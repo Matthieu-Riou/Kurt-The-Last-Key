@@ -257,3 +257,11 @@ void Personnage::animer(Dir dir){
 void Personnage::afficher(sf::RenderWindow &app) const{
 	app.draw(sprite_);
 }
+
+
+
+
+void Personnage::setTexture(std::vector<sf::Texture*> textures)
+{
+	textures_ = textures;
+}

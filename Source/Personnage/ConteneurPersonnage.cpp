@@ -55,6 +55,14 @@ void ConteneurPersonnage::decorerSaut()
 	perso_ = std::shared_ptr<Personnage>(new DoubleSaut(perso_));
 }
 
+/** \brief Decore le personnage avec une texture rouge
+*/
+void ConteneurPersonnage::decorerTexture()
+{
+	perso_->setTexture(Propriete::Hero::texturesRouges());
+	perso_->updateSprite();
+}
+
 /** \brief Surcharge de l'operateur *
 	\return Une référence sur le personnage encapsulé
 */

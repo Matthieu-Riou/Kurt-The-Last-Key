@@ -25,6 +25,7 @@ class ConteneurPersonnage
 		void creerHero();
 		void decorerVitesse(float vitesse);
 		void decorerSaut();
+		void decorerTexture();
 		
 		Personnage& operator*() const;
 		std::shared_ptr<Personnage> operator->() const;

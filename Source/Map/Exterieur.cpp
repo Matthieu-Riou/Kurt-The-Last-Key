@@ -24,7 +24,7 @@ Exterieur::Exterieur(int difficulte, ConteneurPersonnage* perso) : Map(this, per
 	addObjet(new EtoileVitesse());
 	addObjet(new EtoileVitesse());
 	addObjet(new EtoileSaut());
-
+	addObjet(new EtoileCouleur());
 	
 }
 

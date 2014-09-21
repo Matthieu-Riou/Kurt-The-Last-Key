@@ -61,6 +61,10 @@ class DecorateurPersonnage : public Personnage
         virtual void deplacer(Dir dir, float value);
         virtual void animer(Dir dir);
 		virtual void afficher(sf::RenderWindow &app) const;
+
+
+
+		virtual void setTexture(std::vector<sf::Texture*> textures);
 };
 
 #endif

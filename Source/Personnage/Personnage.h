@@ -52,6 +52,7 @@ class Personnage
         EtatAnimation* etatCourant_;				/*!< L'état courant */
         
         Inventaire* inventaire_;					/*!< L'inventaire du personnage */
+
         
     public:
         Personnage(Dir d ,sf::Vector2f taille, std::vector<sf::Texture*> textures, EtatAnimation* etatSol, EtatAnimation* etatAir, EtatAnimation* etatAirIntermediaire, EtatAnimation* etatBatiment, Inventaire* inventaire);
@@ -98,6 +99,9 @@ class Personnage
         virtual void deplacer(Dir dir, float value);
         virtual void animer(Dir dir);
 		virtual void afficher(sf::RenderWindow &app) const;
+
+
+		virtual void setTexture(std::vector<sf::Texture*> textures);
 
 };
 
