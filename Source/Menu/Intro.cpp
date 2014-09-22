@@ -36,89 +36,36 @@ Intro::~Intro()
 void Intro::run(sf::RenderWindow &app)
 {
 	int i = 0;
-
-	while(perso_->getPosition().x < bat_.getPositionPorte().x)
-	{
-		if(i < 500)
-		{
-			sf::FloatRect rect = texte_.getLocalBounds();
-			texte_.setPosition(sf::Vector2f((Propriete::Fenetre::fenX() - rect.width) / 2, (Propriete::Fenetre::fenY() - Propriete::Fenetre::hauteurSol() - rect.height/2 -500 + i )));
-			i++;
-		}
-
-		perso_->deplacer(DROITE, 2.);
-
-		afficher(app);
-	}
-
-	perso_->setDir(HAUT);	
-
-	for(unsigned int j = 0; j < 50; j++)
-	{
-		if(i < 500)
-		{
-			sf::FloatRect rect = texte_.getLocalBounds();
-			texte_.setPosition(sf::Vector2f((Propriete::Fenetre::fenX() - rect.width) / 2, (Propriete::Fenetre::fenY() - Propriete::Fenetre::hauteurSol() - rect.height/2 -500 + i )));
-			i++;
-		}
-
-		afficher(app);
-	}
-	
-	perso_->setDir(BAS);
-
-	for(unsigned int j = 0; j < 50; j++)
-	{
-		if(i < 500)
-		{
-			sf::FloatRect rect = texte_.getLocalBounds();
-			texte_.setPosition(sf::Vector2f((Propriete::Fenetre::fenX() - rect.width) / 2, (Propriete::Fenetre::fenY() - Propriete::Fenetre::hauteurSol() - rect.height/2 -500 + i )));
-			i++;
-		}
-
-		afficher(app);
-	}
-	
-	perso_->setDir(GAUCHE);
-
-	for(unsigned int j = 0; j < 50; j++)
-	{
-		if(i < 500)
-		{
-			sf::FloatRect rect = texte_.getLocalBounds();
-			texte_.setPosition(sf::Vector2f((Propriete::Fenetre::fenX() - rect.width) / 2, (Propriete::Fenetre::fenY() - Propriete::Fenetre::hauteurSol() - rect.height/2 -500 + i )));
-			i++;
-		}
-
-		afficher(app);
-	}
-	
-	perso_->setDir(DROITE);
-
-	for(unsigned int j = 0; j < 50; j++)
-	{
-		if(i < 500)
-		{
-			sf::FloatRect rect = texte_.getLocalBounds();
-			texte_.setPosition(sf::Vector2f((Propriete::Fenetre::fenX() - rect.width) / 2, (Propriete::Fenetre::fenY() - Propriete::Fenetre::hauteurSol() - rect.height/2 -500 + i )));
-			i++;
-		}
-
-		afficher(app);
-	}
-	
-	perso_->setDir(BAS);
-
-	while(i < 500)
-	{
-		sf::FloatRect rect = texte_.getLocalBounds();
-		texte_.setPosition(sf::Vector2f((Propriete::Fenetre::fenX() - rect.width) / 2, (Propriete::Fenetre::fenY() - Propriete::Fenetre::hauteurSol() - rect.height/2 -500 + i )));
-		i++;
-		afficher(app);
-	}
+	int j = 25;
+	std::list<Dir> list_direction = {HAUT, BAS, GAUCHE, DROITE, BAS};
 
 	while(!(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)))
 	{
+		if(i < 500)
+		{
+			sf::FloatRect rect = texte_.getLocalBounds();
+			texte_.setPosition(sf::Vector2f((Propriete::Fenetre::fenX() - rect.width) / 2, (Propriete::Fenetre::fenY() - Propriete::Fenetre::hauteurSol() - rect.height/2 -500 + i )));
+			i++;
+		}
+
+		if(perso_->getPosition().x < bat_.getPositionPorte().x)
+		{
+			perso_->deplacer(DROITE, 2.);
+		}
+		else if(!list_direction.empty())
+		{
+			if(j == 25)
+			{
+				perso_->setDir(list_direction.front());
+				list_direction.pop_front();
+				j = 0;
+			}
+			else
+			{
+				j++;
+			}
+		}
+
 		afficher(app);
 	}
 }
