@@ -1,15 +1,7 @@
 #include "Intro.h"
 
-Intro::Intro() : 
-			bat_etage_(5),
-			bat_nbFenLargeur_(3),
-			bat_posX(600.),
-			bat_tailleFen_(Propriete::BatimentExterieur::tailleFenetre()),
-			bat_espaceFen_(Propriete::BatimentExterieur::espaceFenetre()),
-			bat_taillePorte_(Propriete::BatimentExterieur::taillePorte()),
-			bat_taille_(bat_nbFenLargeur_*(bat_tailleFen_.x + bat_espaceFen_.x) + bat_espaceFen_.x, (bat_etage_)*(bat_tailleFen_.y + bat_espaceFen_.y) + bat_taillePorte_.y + bat_espaceFen_.y),
-			bat_mur_(sf::RectangleShape(bat_taille_)), 
-			bat_porte_(sf::RectangleShape(bat_taillePorte_))
+Intro::Intro() :
+			bat_(600., 5, 3)
 {
 
 	fond_.setSize(sf::Vector2f(Propriete::Fenetre::fenX(), Propriete::Fenetre::hauteurSol()));
@@ -28,30 +20,6 @@ Intro::Intro() :
 	sf::FloatRect rect = texte_.getLocalBounds();
 	texte_.setPosition(sf::Vector2f((Propriete::Fenetre::fenX() - rect.width) / 2, (Propriete::Fenetre::fenY() - Propriete::Fenetre::hauteurSol() - rect.height/2)));
 
-
-	bat_mur_.move(bat_posX, Propriete::Fenetre::hauteurSol() - bat_taille_.y);
-	bat_mur_.setFillColor(Propriete::BatimentExterieur::colorMur());
-	bat_mur_.setOutlineThickness(1);
-	bat_mur_.setOutlineColor(sf::Color::Black);
-	
-
-	bat_porte_.move((bat_posX + bat_taille_.x/2 - bat_taillePorte_.x/2),  Propriete::Fenetre::hauteurSol() - bat_taillePorte_.y);
-	bat_porte_.setFillColor(Propriete::BatimentExterieur::colorPorteOuverte());
-	bat_porte_.setOutlineThickness(1);
-	bat_porte_.setOutlineColor(sf::Color::Black);
-	
-	for(unsigned int i = 0; i < bat_etage_; i++)
-	{
-		for(unsigned int j = 0; j < bat_nbFenLargeur_; j++)
-		{
-			bat_fen_.push_back(sf::RectangleShape(bat_tailleFen_));
-			bat_fen_.back().move(bat_posX + bat_espaceFen_.x + j*(bat_tailleFen_.x + bat_espaceFen_.x), Propriete::Fenetre::hauteurSol() - bat_taillePorte_.y -((bat_tailleFen_.y + bat_espaceFen_.x)*(i+1)));
-			bat_fen_.back().setFillColor(Propriete::BatimentExterieur::colorFenetre());
-			bat_fen_.back().setOutlineThickness(1);
-			bat_fen_.back().setOutlineColor(sf::Color::Black);
-		}
-	}
-
 	perso_.creerHero();
 	perso_->setPosition(sf::Vector2f(-100.0, Propriete::Fenetre::hauteurSol() - Propriete::Hero::taille().x), DROITE);
 }
@@ -69,7 +37,7 @@ void Intro::run(sf::RenderWindow &app)
 {
 	int i = 0;
 
-	while(perso_->getPosition().x < bat_porte_.getPosition().x)
+	while(perso_->getPosition().x < bat_.getPositionPorte().x)
 	{
 		if(i < 500)
 		{
@@ -187,13 +155,7 @@ void Intro::afficher(sf::RenderWindow &app)
 		(*it)->afficher(app);
 
 
-	app.draw(bat_mur_);
-	app.draw(bat_porte_);
-
-	for(unsigned int i = 0; i < bat_fen_.size(); i++)
-    {
-		app.draw(bat_fen_[i]);
-	}
+	bat_.afficher(app);
 
 	perso_->afficher(app);
 

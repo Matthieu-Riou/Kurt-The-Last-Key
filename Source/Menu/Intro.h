@@ -5,26 +5,15 @@
 #include "../Personnage/ConteneurPersonnage.h"
 #include "../Aleatoire.h"
 #include "../Propriete/Propriete.h"
+#include "../Batiment/BatimentExterieur_Apparence.h"
 #include "../Map/Exterieur.h"
 
 class Intro
 {
 	private:
-		unsigned int bat_etage_;
-		unsigned int bat_nbFenLargeur_;
-		float bat_posX;
-
-		sf::Vector2f bat_tailleFen_;
-		sf::Vector2f bat_espaceFen_;
-		sf::Vector2f bat_taillePorte_;
-		sf::Vector2f bat_taille_;
-
-		sf::RectangleShape bat_mur_;
-		sf::RectangleShape bat_porte_;
-		std::vector<sf::RectangleShape> bat_fen_;
+		BatimentExterieur_Apparence bat_;
 
 		ConteneurPersonnage perso_;
-
 
 
 		sf::RectangleShape fond_;
