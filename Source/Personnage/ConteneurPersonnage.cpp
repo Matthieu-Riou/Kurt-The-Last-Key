@@ -1,5 +1,4 @@
 #include "ConteneurPersonnage.h"
-#include "Personnage.h"
 #include "Decorateur/BonusVitesse.h"
 #include "Decorateur/DoubleSaut.h"
 #include "Hero.h"

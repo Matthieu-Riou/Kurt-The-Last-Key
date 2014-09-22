@@ -7,8 +7,7 @@
 */
 
 #include <memory>
-
-class Personnage;
+#include "Personnage.h"
 
 /** \class ConteneurPersonnage
 	\brief La classe encapsulant Personnage

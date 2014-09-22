@@ -11,7 +11,6 @@
 #include "../Espace.h"
 #include "../Propriete/Propriete.h"
 #include "Inventaire.h"
-#include "ConteneurPersonnage.h"
 #include <vector>
 
 
