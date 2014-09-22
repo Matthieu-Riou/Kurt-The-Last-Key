@@ -21,6 +21,8 @@ class Intro
 		sf::Text texte_;
 		sf::Text press_;
 
+		bool pressAffiche_;
+
 		std::list<Decor*> decor_;
 
 	public:

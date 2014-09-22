@@ -1,6 +1,6 @@
 #include "Intro.h"
 
-Intro::Intro() : bat_(600., 5, 3)
+Intro::Intro() : bat_(600., 5, 3), pressAffiche_(false)
 {
 	fond_.setSize(sf::Vector2f(Propriete::Fenetre::fenX(), Propriete::Fenetre::hauteurSol()));
 	fond_.setFillColor(sf::Color::Cyan);
@@ -45,6 +45,7 @@ void Intro::run(sf::RenderWindow &app)
 {
 	int i = 0;
 	int j = 25;
+	int pressCpt = 200;
 	std::list<Dir> list_direction = {HAUT, BAS, GAUCHE, DROITE, BAS};
 
 	while(!(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)))
@@ -73,6 +74,18 @@ void Intro::run(sf::RenderWindow &app)
 				j++;
 			}
 		}
+
+		if(pressCpt == 120)
+		{
+			pressAffiche_ = true;
+		}
+		else if(pressCpt == 0)
+		{
+			pressAffiche_ = false;
+			pressCpt = 200;
+		}
+
+		pressCpt--;
 
 		afficher(app);
 	}
@@ -115,7 +128,9 @@ void Intro::afficher(sf::RenderWindow &app)
 	perso_->afficher(app);
 
 	app.draw(texte_);
-	app.draw(press_);
+
+	if(pressAffiche_)
+		app.draw(press_);
 
     app.display();
 }
