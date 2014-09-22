@@ -19,6 +19,7 @@ class Intro
 		sf::RectangleShape fond_;
 		sf::Font font_;
 		sf::Text texte_;
+		sf::Text press_;
 
 		std::list<Decor*> decor_;
 

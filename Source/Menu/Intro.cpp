@@ -1,9 +1,7 @@
 #include "Intro.h"
 
-Intro::Intro() :
-			bat_(600., 5, 3)
+Intro::Intro() : bat_(600., 5, 3)
 {
-
 	fond_.setSize(sf::Vector2f(Propriete::Fenetre::fenX(), Propriete::Fenetre::hauteurSol()));
 	fond_.setFillColor(sf::Color::Cyan);
 
@@ -18,7 +16,17 @@ Intro::Intro() :
 	texte_.setStyle(sf::Text::Bold);
 
 	sf::FloatRect rect = texte_.getLocalBounds();
-	texte_.setPosition(sf::Vector2f((Propriete::Fenetre::fenX() - rect.width) / 2, (Propriete::Fenetre::fenY() - Propriete::Fenetre::hauteurSol() - rect.height/2)));
+	texte_.setPosition(sf::Vector2f((Propriete::Fenetre::fenX() - rect.width) / 2, 0.));
+
+
+	press_.setString("Press Enter to begin");
+	press_.setFont(font_);
+	press_.setColor(sf::Color::White);
+	press_.setCharacterSize(50);
+	press_.setStyle(sf::Text::Bold);
+
+	sf::FloatRect pressRect = press_.getLocalBounds();
+	press_.setPosition(sf::Vector2f((Propriete::Fenetre::fenX() - pressRect.width) / 2, ((Propriete::Fenetre::fenY() + Propriete::Fenetre::hauteurSol()) / 2) - pressRect.height));
 
 	perso_.creerHero();
 	perso_->setPosition(sf::Vector2f(-100.0, Propriete::Fenetre::hauteurSol() - Propriete::Hero::taille().x), DROITE);
@@ -107,6 +115,7 @@ void Intro::afficher(sf::RenderWindow &app)
 	perso_->afficher(app);
 
 	app.draw(texte_);
+	app.draw(press_);
 
     app.display();
 }
