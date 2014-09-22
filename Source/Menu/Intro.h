@@ -2,6 +2,7 @@
 #define INTRO_H
 
 #include <SFML/Graphics.hpp>
+#include "../Personnage/ConteneurPersonnage.h"
 #include "../Aleatoire.h"
 #include "../Propriete/Propriete.h"
 #include "../Map/Exterieur.h"
@@ -21,6 +22,8 @@ class Intro
 		sf::RectangleShape bat_mur_;
 		sf::RectangleShape bat_porte_;
 		std::vector<sf::RectangleShape> bat_fen_;
+
+		ConteneurPersonnage perso_;
 
 
 

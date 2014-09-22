@@ -52,6 +52,8 @@ Intro::Intro() :
 		}
 	}
 
+	perso_.creerHero();
+	perso_->setPosition(sf::Vector2f(-100.0, Propriete::Fenetre::hauteurSol() - Propriete::Hero::taille().x), DROITE);
 }
 
 Intro::~Intro()
@@ -69,6 +71,8 @@ void Intro::run(sf::RenderWindow &app)
 	{
 		sf::FloatRect rect = texte_.getLocalBounds();
 		texte_.setPosition(sf::Vector2f((Propriete::Fenetre::fenX() - rect.width) / 2, (Propriete::Fenetre::fenY() - Propriete::Fenetre::hauteurSol() - rect.height/2 -500 + i )));
+
+		perso_->deplacer(DROITE, 2.);
 
 		afficher(app);
 	}
@@ -118,6 +122,8 @@ void Intro::afficher(sf::RenderWindow &app)
     {
 		app.draw(bat_fen_[i]);
 	}
+
+	perso_->afficher(app);
 
 	app.draw(texte_);
 
