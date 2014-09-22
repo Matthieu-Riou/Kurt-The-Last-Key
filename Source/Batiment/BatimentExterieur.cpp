@@ -129,58 +129,6 @@ BatimentInterieur* BatimentExterieur::getInterieur() const
 	return interieur_;
 }
 
-/*! \brief Deplace le batiment suivant la direction
-	\param dir La direction voulue
-*/
-void BatimentExterieur::deplacer(Dir dir)
-{
-	switch(dir)
-    {
-        case GAUCHE:
-            mur_.move(2., 0.);
-            porte_.move(2., 0.);
-            
-            for(unsigned int i = 0; i < fen_.size(); i++)
-            {
-            	fen_[i].move(2., 0.);
-        	}
-            
-            break;
-
-        case DROITE:
-            mur_.move(-2., 0.);
-            porte_.move(-2., 0.);
-            
-            for(unsigned int i = 0; i < fen_.size(); i++)
-            {
-            	fen_[i].move(-2., 0.);
-        	}
-        	
-            break;
-            
-		case HAUT:
-            mur_.move(0., -2.);
-            porte_.move(0., -2.);
-            
-            for(unsigned int i = 0; i < fen_.size(); i++)
-            {
-            	fen_[i].move(0., -2.);
-        	}
-        	
-            break;
-            
-		case BAS:
-            mur_.move(0., 2.);
-            porte_.move(0., 2.);
-            
-            for(unsigned int i = 0; i < fen_.size(); i++)
-            {
-            	fen_[i].move(0., 2.);
-        	}
-        	
-            break;
-    }
-}
 
 /*! \brief Affiche l'extérieur du batiment:  le mur, la porte puis les fenetres
 	\param app La fenetre du jeu

@@ -60,7 +60,6 @@ class BatimentExterieur
 		
 		BatimentInterieur* getInterieur() const;
 		
-		void deplacer(Dir dir);
 		void afficher(sf::RenderWindow &app) const;
 };
 
