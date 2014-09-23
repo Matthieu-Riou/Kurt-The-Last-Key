@@ -49,7 +49,7 @@ void Intro::run(sf::RenderWindow &app)
 
 	std::list<Dir> list_direction = {HAUT, BAS, GAUCHE, DROITE, BAS};
 
-	while(!(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)))
+	while(!(sf::Keyboard::isKeyPressed(sf::Keyboard::Return)))
 	{
 		if(i < 500)
 		{
