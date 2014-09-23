@@ -22,7 +22,7 @@ Intro::Intro() : bat_(600., 5, 3)
 	press_.setString("Press Enter to begin");
 	press_.setFont(font_);
 	press_.setColor(sf::Color::White);
-	press_.setCharacterSize(50);
+	press_.setCharacterSize(40);
 	press_.setStyle(sf::Text::Bold);
 
 	sf::FloatRect pressRect = press_.getLocalBounds();
@@ -45,6 +45,8 @@ void Intro::run(sf::RenderWindow &app)
 {
 	int i = 0;
 	int j = 25;
+	int pressCpt = 50;
+
 	std::list<Dir> list_direction = {HAUT, BAS, GAUCHE, DROITE, BAS};
 
 	while(!(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)))
@@ -74,6 +76,24 @@ void Intro::run(sf::RenderWindow &app)
 			}
 		}
 
+		if(pressCpt > 0)
+		{
+			press_.setCharacterSize(40 - pressCpt/4);
+		}
+		else if(pressCpt > -50)
+		{
+			press_.setCharacterSize(40 + pressCpt/4);
+		}
+		else
+		{
+			pressCpt = 50;
+		}
+
+		
+		sf::FloatRect pressRect = press_.getLocalBounds();
+	press_.setPosition(sf::Vector2f((Propriete::Fenetre::fenX() - pressRect.width) / 2, ((Propriete::Fenetre::fenY() + Propriete::Fenetre::hauteurSol()) / 2) - pressRect.height));
+
+		pressCpt --;
 		afficher(app);
 	}
 }
@@ -115,6 +135,7 @@ void Intro::afficher(sf::RenderWindow &app)
 	perso_->afficher(app);
 
 	app.draw(texte_);
+
 	app.draw(press_);
 
     app.display();
