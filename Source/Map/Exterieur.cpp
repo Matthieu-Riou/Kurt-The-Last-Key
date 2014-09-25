@@ -172,6 +172,20 @@ void Exterieur::genererCle(int nbBatiment)
 	}while(cptBatFerme < nbBatiment - 1 && Aleatoire::getNext(0, 5) != 1); //Include la difficulte dans l'aleatoire d'arret
 }
 
+void Exterieur::start(sf::RenderWindow &app)
+{
+	(*Kurt)->setPosition(sf::Vector2f(-100, (*Kurt)->getPosition().y), DROITE);
+
+	while((*Kurt)->getPosition().x < 50)
+	{
+		update();
+		(*Kurt)->deplacer(DROITE, (*Kurt)->getVitesse());
+		app.clear(sf::Color::Black);
+		afficher(app);
+		app.display();
+	}
+}
+
 /** \brief Appel à Map::sortir()
 */
 void Exterieur::sortir()

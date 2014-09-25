@@ -46,6 +46,8 @@ class Exterieur : public Map
     public:
         Exterieur(int difficulte, ConteneurPersonnage* perso);
         virtual ~Exterieur();
+
+		virtual void start(sf::RenderWindow &app);
         
         virtual void sortir();
         

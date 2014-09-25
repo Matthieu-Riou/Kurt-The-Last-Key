@@ -27,6 +27,9 @@ Map::~Map()
 {
 }
 
+void Map::start(sf::RenderWindow &app)
+{}
+
 /** \brief Fonction appelée lorsque l'on arrive sur la map (ne fait rien par défaut)
 */
 void Map::entrer()

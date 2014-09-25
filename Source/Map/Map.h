@@ -35,6 +35,8 @@ class Map
     public:
         Map(Map* mapCourante_, ConteneurPersonnage* perso, Map* mapParent = NULL);
         virtual ~Map();
+
+		virtual void start(sf::RenderWindow &app);
         
         virtual void entrer();
         virtual void sortir();

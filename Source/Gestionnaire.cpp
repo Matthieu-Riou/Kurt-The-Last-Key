@@ -31,6 +31,11 @@ Gestionnaire::~Gestionnaire(){
     Propriete::destruction();
 }
 
+void Gestionnaire::start(sf::RenderWindow &app)
+{
+	map_->start(app);
+}
+
 /*! \brief Actualise la map et le menu
 	\param app La fenetre
 */

@@ -36,6 +36,8 @@ class Gestionnaire
         Gestionnaire();
         ~Gestionnaire();
 
+		void start(sf::RenderWindow &app);
+
         void action(sf::RenderWindow const& app);
         
         void afficher(sf::RenderWindow &app) const;

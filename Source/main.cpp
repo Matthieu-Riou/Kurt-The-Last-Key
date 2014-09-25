@@ -23,6 +23,8 @@ int main()
 	Intro intro;
 	intro.run(window);
 
+	gestionnaire.start(window);
+
     // on fait tourner le programme jusqu'à ce que la fenêtre soit fermée
     while (window.isOpen())
     {
